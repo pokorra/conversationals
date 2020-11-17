@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $main-font;
+    font-size: 15px;
+    transition: .5s;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+h1, h2, h3 {
+    font-family: $title-font;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section {
+    min-height: 40vh;
+    border: 1px solid pink;
+    background-color: yellowgreen;
+}

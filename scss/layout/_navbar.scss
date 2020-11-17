@@ -1,0 +1,41 @@
+.navbar {
+    border: 1px solid maroon;
+    height: 5vh;
+    position: sticky;
+    z-index: 5;
+    .menu-nav {
+        height: inherit;
+        list-style-type: none;
+        @include centerflex;
+        justify-content: space-evenly;
+        background-color: rgba(245, 245, 245, .5);
+
+        border: 2px dotted green;
+        .nav-element {
+            font-weight: bold;
+        }
+    }
+}
+
+@media only screen and (min-width: 730px ) {
+    .navbar {
+        .menu-nav {
+
+            .nav-element {
+
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1100px ) {
+    .navbar {
+        .menu-nav {
+            .nav-element {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
