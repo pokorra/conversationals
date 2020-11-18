@@ -1,8 +1,8 @@
 .sec-info-art {
-    padding: $default-margin;
+    padding: $default-margin*2 $default-margin;
+    margin: $default-margin*2 0;
     @include centerflex;
     flex-direction: column;
-    margin: $default-margin*2 0;
     background-color: $side-color;
 
     .info-text {
