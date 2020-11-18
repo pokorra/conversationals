@@ -8,6 +8,7 @@
         max-height: 150px;
         background-color: rgba(245, 245, 245, .7);
         position: fixed;
+        z-index: 10;
         .logo {
             width: 30vw;
             height: 30vw;
@@ -15,7 +16,7 @@
             max-width: 150px;
             color: $font-color;
             left: 0;
-            z-index: 6;   
+            z-index: 10;   
         }
     }
     .title {
@@ -23,7 +24,7 @@
         color: black;
         position: absolute;
         right: 3vw;
-        z-index: 3;
+        z-index: 11;
     }
 }
 

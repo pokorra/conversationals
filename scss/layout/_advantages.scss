@@ -9,6 +9,7 @@
         padding: $default-margin;
         font-size: 30px;
         color: whitesmoke;
+        text-shadow: 1px 1px $font-color, -1px -1px $font-color;
         text-align: center;
     }
     .list-of-advantages {
@@ -53,8 +54,6 @@
         .list-of-advantages {
             width: 80vw;
             margin: 0 auto;
-
-
         }
     }
 }

@@ -1,5 +1,12 @@
 .footer {
     height: 5vh;
     background-color: $font-color;
-    color: whitesmoke;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .personal-data, .git-address {
+        color: whitesmoke;
+        padding: 0 $default-margin;
+    }
+    
 }
