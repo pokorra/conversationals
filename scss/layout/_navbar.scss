@@ -10,14 +10,15 @@
         list-style-type: none;
         @include centerflex;
         justify-content: space-evenly;
-        background-color: rgba(245, 245, 245, .5);
-
+        .nav-element {
+            font-weight: bold;
+        }
     }
 }
 
 @media only screen and (min-width: 730px ) {
     .navbar {
-        top: 5vw;
+        top: 7vw;
         .menu-nav {
             .nav-element {
                 font-size: 15px;

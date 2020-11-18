@@ -3,8 +3,10 @@
 $title-font: 'Berkshire Swash', cursive;
 $main-font: 'Lato', sans-serif;
 
-$side-color: #ff8c00;
+$side-color: #d8d8d8;
 $font-color: rgb(70, 70, 70);
+
+$default-margin: 10px;
 
 @mixin centerflex {
     display: flex;
