@@ -1,18 +1,22 @@
 .head {
-    width: 100vw;
     height: 15vh;
-    padding-right: 3vw;
     @include centerflex;
-    justify-content: space-between;
-    background-color: $side-color;
+
     .logo {
         width: 30vw;
         height: 30vw;
         max-height: 150px;
         max-width: 150px;
+        color: $font-color;
+        position: fixed;
+        left: 0;
+        z-index: 6;   
     }
     .title {
         font-size: 30px;
+        color: black;
+        position: absolute;
+        right: 3vw;
     }
 }
 

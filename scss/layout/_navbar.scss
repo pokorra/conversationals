@@ -1,28 +1,26 @@
 .navbar {
-    border: 1px solid maroon;
     height: 5vh;
     position: sticky;
+    top: 10vw;
     z-index: 5;
     .menu-nav {
         height: inherit;
+        width: 70%;
+        margin: 0 0 0 auto;
         list-style-type: none;
         @include centerflex;
         justify-content: space-evenly;
         background-color: rgba(245, 245, 245, .5);
 
-        border: 2px dotted green;
-        .nav-element {
-            font-weight: bold;
-        }
     }
 }
 
 @media only screen and (min-width: 730px ) {
     .navbar {
+        top: 5vw;
         .menu-nav {
-
             .nav-element {
-
+                font-size: 15px;
             }
         }
     }
@@ -30,7 +28,10 @@
 
 @media only screen and (min-width: 1100px ) {
     .navbar {
+        top: 7vh;
         .menu-nav {
+            width: 50%;
+            margin: 0 0 0 auto;
             .nav-element {
                 &:hover {
                     cursor: pointer;
