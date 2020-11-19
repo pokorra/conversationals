@@ -17,28 +17,27 @@
         justify-content: space-evenly;
         flex-wrap: wrap;
         padding-bottom: $default-margin*2;
+
         .single-advantage {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            background-color: whitesmoke;
             margin: $default-margin*2;
             @include centerflex;
             justify-content: center;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
             color: $font-color;
+            background-color: whitesmoke;
             transition: .7s;
             &:hover {
-                // background-color: transparent;
                 border-radius: 25%;
             }
             .advantage-link {
                 .advantage-container {
+                    @include centerflex;
+                    justify-content: center;
                     width: 90px;
                     height: 90px;
                     border-radius: 50%;
-                    @include centerflex;
-                    justify-content: center;
-                    background-color: rgba(245, 245, 245, .9);
                     .advantage-name {
                         overflow-wrap: normal;
                         text-align: center;

@@ -4,9 +4,12 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    .personal-data, .git-address {
+    .personal-data, .git-address, .address {
         color: whitesmoke;
         padding: 0 $default-margin;
+    }
+    .address {
+        cursor: pointer;
     }
     
 }
