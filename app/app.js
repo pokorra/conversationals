@@ -1,29 +1,44 @@
-//scrolling
-const info = document.getElementById('info');
-const advantages =document.getElementById('advantages');
-const contact = document.getElementById('contact');
+const api = "http://localhost:3000/base";
+const base = [];
+const body = document.querySelector('body');
 
-const toInfo = document.querySelector('.sec-info');
-const toAdvantages = document.querySelector('.sec-advantages');
-const toContact = document.querySelector('.footer');
-
-function Scroll(from, to){
-    to.addEventListener('click', ()=> {
-        from.scrollIntoView({behavior: "smooth"});
-        console.log("bang");
-    })
+function createNew(el){
+    return document.createElement(el);
 }
-Scroll(toInfo, info);
-Scroll(toAdvantages, advantages);
-Scroll(toContact, contact);
+function append(parent, el){
+    return parent.appendChild(el);
+}
 
-//displaying email address
-const mail = document.querySelector('.address')
-mail.innerHTML = mail.dataset.par;
-mail.addEventListener('click', ()=> {
-    if (mail.innerHTML === mail.dataset.par) {
-        mail.innerHTML = mail.dataset.mail
-    } else {
-        mail.innerHTML = mail.dataset.par
-    }
-})
+fetch(api)
+    .then(res => res.json())
+    .then(data => {
+        return data.map(singleData => {
+            console.log(singleData.name);
+            let name = singleData.name;
+            let h2 = createNew('h2');
+            console.log(singleData.info);
+            h2.innerHTML = name;
+            append(body, h2);
+        })
+
+    })
+
+
+// function getBase() {
+//     const base = [];
+
+//     const promise = fetch(api)
+//     .then(res => {
+//         return res.json()
+//     })
+//     .then(data => {
+//         base.push(data);
+//         console.log(base);
+//     })
+//     .catch(err => console.log('pojawił się error', err));
+
+//     return Promise.all(base);
+// }
+// getBase();
+
+console.log(base);
