@@ -1,0 +1,48 @@
+.popup-div {
+    position: absolute;
+    width: 70vw;
+    height: 70vh;
+    z-index: 3;
+
+    margin: 15vh 15vw;
+    box-shadow: 5px 5px 15px rgb(128, 128, 128), 3px 3px 20px rgb(80, 80, 80);
+    background-color: #357451;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+    h2, li, p {
+        color: rgb(224, 224, 224);
+    }
+    h2 {
+        font-size: 2rem;
+        padding: 2vw;
+    }
+}
+
+.alg-list {
+    list-style: none;
+
+    li {
+        padding: .5vw;
+        margin: .5vw;
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+        font-size: 1.2em;
+        line-height: 1.6rem;
+
+        border: 1px dotted seagreen;
+
+        .btn-link {
+            width: auto;
+            max-width: 30%;
+            align-self: end;
+            border-radius: 5px;
+        }
+    }
+}

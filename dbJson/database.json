@@ -4,16 +4,16 @@
                    "name" : "Antybiotyki",
                    "info": [ 
                         { 
-                            "1": "Być na nim i nie móc: ćwiczyć na wf-ie, pić alkoholu"
+                            "innerinfo": "Być na nim i nie móc: ćwiczyć na wf-ie, pić alkoholu"
                         },
                         {
-                            "1": "Nie być na nim i móc: ćwiczyć na wf-ie, pić alkohol"
+                            "innerinfo": "Nie być na nim i móc: ćwiczyć na wf-ie, pić alkohol"
                         },
                         {
-                            "1": "Przepisują na wszystko, nawet na grypę!"
+                            "innerinfo": "Przepisują na wszystko, nawet na grypę!"
                         },
                         {
-                            "1": "Są w mięsie"
+                            "innerinfo": "Są w mięsie"
                         }
                    ]
                },
@@ -21,17 +21,17 @@
                     "name": "Bazar",
                     "info": [
                         {
-                            "1": "Mam najlepszy u siebie pod domem (gdzie indziej: chińszczyzna, tandeta, robaczywe mięso)"
+                            "innerinfo": "Mam najlepszy u siebie pod domem (gdzie indziej: chińszczyzna, tandeta, robaczywe mięso)"
                         },
                         {
-                            "1": "Muszę iść na"
+                            "innerinfo": "Muszę iść na"
                         },
                         {
-                            "1": "Zatłoczony, nie można normalnie zrobić zakupów",
-                            "2": ["Tłok"]
+                            "innerinfo": "Zatłoczony, nie można normalnie zrobić zakupów",
+                            "innerlink": ["Tłok"]
                         },
                         {
-                            "1": "Likwidują mi"
+                            "innerinfo": "Likwidują mi"
                         }
                     ]
                 },
@@ -42,24 +42,24 @@
                 {
                     "name": "Bezdomni",
                     "info": [
-                        { "1": "Powinno się coś z tym zrobić"},
-                        { "1": "Łażą po dworcu i szczają do koszy na śmieci"},
-                        { "1": "Nie dawaj pieniędzy, zwłaszcza dzieciom, ja nigdy nie daję chyba że na chleb, ale na chleb też nie daję"}
+                        { "innerinfo": "Powinno się coś z tym zrobić"},
+                        { "innerinfo": "Łażą po dworcu i szczają do koszy na śmieci"},
+                        { "innerinfo": "Nie dawaj pieniędzy, zwłaszcza dzieciom, ja nigdy nie daję chyba że na chleb, ale na chleb też nie daję"}
                     ]
                 },
                 {
                     "name": "Bezsenność",
                     "info": [
-                        { "1" : "Męczy mnie"},
-                        { "1" : "Wspomnieć możliwe przyczyny, np. obżarstwo na wieczór"}
+                        { "innerinfo" : "Męczy mnie"},
+                        { "innerinfo" : "Wspomnieć możliwe przyczyny, np. obżarstwo na wieczór"}
                     ]
                 },
                 {
                     "name": "Biomet",
                     "info": [
-                        { "1": "Zawsze „korzystny” bądź „niekorzystny”"},
-                        { "1": "Dobrze widziane dywagacje nt. meteoropatii"},
-                        { "1": "Nikt nie wie, na czym polega"}
+                        { "innerinfo": "Zawsze „korzystny” bądź „niekorzystny”"},
+                        { "innerinfo": "Dobrze widziane dywagacje nt. meteoropatii"},
+                        { "innerinfo": "Nikt nie wie, na czym polega"}
                     ]
                 },
                 {
@@ -69,14 +69,14 @@
                 {
                     "name": "Buty",
                     "info": [
-                        { "1": "Kiedy nie wiadomo co powiedzieć: „aha, takie buty”"}
+                        { "innerinfo": "Kiedy nie wiadomo co powiedzieć: „aha, takie buty”"}
                     ],
                     "link": "Los"
                 },
                 {
                     "name": "Bynajmniej",
                     "info": [
-                        { "1": "Mylić z „przynajmniej” – dla dodania sobie erudycji"}
+                        { "innerinfo": "Mylić z „przynajmniej” – dla dodania sobie erudycji"}
                     ]
                 },
                 {
@@ -86,26 +86,26 @@
                 {
                     "name": "Chęci",
                     "info": [
-                        { "1": "Nie mieć (obowiązki)"},
-                        { "1": "Mieć (spanie, jedzenie)"},
-                        { "1": "Dobrymi piekło jest wybrukowane"}
+                        { "innerinfo": "Nie mieć (obowiązki)"},
+                        { "innerinfo": "Mieć (spanie, jedzenie)"},
+                        { "innerinfo": "Dobrymi piekło jest wybrukowane"}
                     ]
                 },
                 {
                     "name": "Cukier",
                     "info": [
                         {
-                            "1": "Biała śmierć",
-                            "2": ["Sól", "Mąka"]
+                            "innerinfo": "Biała śmierć",
+                            "innerlink": ["Sól", "Mąka"]
                         },
                         {
-                            "1": "Jest we wszystkim"
+                            "innerinfo": "Jest we wszystkim"
                         },
                         {
-                            "1": "Kiedyś pożyczało się"
+                            "innerinfo": "Kiedyś pożyczało się"
                         },
                         {
-                            "1": "Dzisiaj jest wypierany przez słodziki"
+                            "innerinfo": "Dzisiaj jest wypierany przez słodziki"
                         }
                     ]
                 },
@@ -113,23 +113,23 @@
                     "name": "Czas",
                     "info": [
                         {
-                            "1": "Najlepiej w wyrażeniu „jak ten czas leci”"
+                            "innerinfo": "Najlepiej w wyrażeniu „jak ten czas leci”"
                         },
                         {
-                            "1": "Przecieka przez palce",
-                            "2": ["Palce"]
+                            "innerinfo": "Przecieka przez palce",
+                            "innerlink": ["Palce"]
                         },
                         {
-                            "1": "Za mało go"
+                            "innerinfo": "Za mało go"
                         },
                         {
-                            "1": "Zmarnowany (znowu)"
+                            "innerinfo": "Zmarnowany (znowu)"
                         },
                         {
-                            "1": "Mówią, że leczy rany"
+                            "innerinfo": "Mówią, że leczy rany"
                         },
                         {
-                            "1": "Z czasem wszystko staje się gorsze/lepsze"
+                            "innerinfo": "Z czasem wszystko staje się gorsze/lepsze"
                         }
                     ]
                 },
@@ -137,14 +137,14 @@
                     "name": "Czosnek",
                     "info": [
                         {
-                            "1": "Trzeba było dodać więcej (do jedzenia)"
+                            "innerinfo": "Trzeba było dodać więcej (do jedzenia)"
                         },
                         {
-                            "1": "Nie trzeba było aż tyle dodawać (do jedzenia)"
+                            "innerinfo": "Nie trzeba było aż tyle dodawać (do jedzenia)"
                         },
                         {
-                            "1": "Żydzi go jedli przed wojną",
-                            "2": ["Przed wojną", "Żydzi"]
+                            "innerinfo": "Żydzi go jedli przed wojną",
+                            "innerlink": ["Przed wojną", "Żydzi"]
                         }
                     ]
                 },
@@ -155,8 +155,8 @@
                 {
                     "name": "Deszcz",
                     "info": [
-                        { "1": "Pada zawsze kiedy: wychodzi się z pracy, wychodzi się z domu do pracy"},
-                        { "1": "Pada zawsze w dzień („Nie mogło w nocy popadać, tylko musi teraz, w ciągu dnia? Jezu!”) "}
+                        { "innerinfo": "Pada zawsze kiedy: wychodzi się z pracy, wychodzi się z domu do pracy"},
+                        { "innerinfo": "Pada zawsze w dzień („Nie mogło w nocy popadać, tylko musi teraz, w ciągu dnia? Jezu!”) "}
                     ]
                 },
                 {
@@ -170,119 +170,119 @@
                 {
                     "name": "Establishment",
                     "info": [
-                        { "1": "Najlepiej (a właściwie najgorzej) - amerykański"}
+                        { "innerinfo": "Najlepiej (a właściwie najgorzej) - amerykański"}
                     ],
                     "link": "Oni"
                 },
                 {
                     "name": "Fachowcy",
                     "info": [
-                        { "1": "Dobrych – ze świecą szukać"},
-                        { "1": "Narzekać, że wszyscy wyjechali za pieniędzmi, a nowych się nie kształci"}
+                        { "innerinfo": "Dobrych – ze świecą szukać"},
+                        { "innerinfo": "Narzekać, że wszyscy wyjechali za pieniędzmi, a nowych się nie kształci"}
                     ]
                 },
                 {
                     "name": "Gazociąg",
                     "info": [
-                        { "1": "Źle jak idzie przez działkę"},
-                        { "1": "Putin na złość ominął Polskę gazociągiem"}
+                        { "innerinfo": "Źle jak idzie przez działkę"},
+                        { "innerinfo": "Putin na złość ominął Polskę gazociągiem"}
                     ]
                 },
                 {
                     "name": "Geje",
                     "info": [
-                        { "1": "Ja nic do nich nie mam, ale (tu wyliczyć, co się do nich ma)"},
-                        { "1": "Kiedyś się tak nie afiszowali jak teraz"}
+                        { "innerinfo": "Ja nic do nich nie mam, ale (tu wyliczyć, co się do nich ma)"},
+                        { "innerinfo": "Kiedyś się tak nie afiszowali jak teraz"}
                     ]
                 },
                 {
                     "name": "Globalne ocieplenie",
                     "info": [
-                        { "1": "To mit"},
-                        { "1": "Jest wszystkiemu winne",
-                          "2": ["Oni"]
+                        { "innerinfo": "To mit"},
+                        { "innerinfo": "Jest wszystkiemu winne",
+                          "innerlink": ["Oni"]
                         }
                     ]
                 },
                 {
                     "name": "Gluten",
                     "info": [
-                        { "1": "Jest we wszystkim"},
-                        { "1": "Osoby, które go nie jedzą mają trudne życie"}
+                        { "innerinfo": "Jest we wszystkim"},
+                        { "innerinfo": "Osoby, które go nie jedzą mają trudne życie"}
                     ]
                 },
                 {
                     "name": "Gorzej",
                     "info": [
-                        { "1": "Zawsze być może"},
-                        { "1": "Już nie może być"}
+                        { "innerinfo": "Zawsze być może"},
+                        { "innerinfo": "Już nie może być"}
                     ]
                 },
                 {
                     "name": "Grzyby",
                     "info": [
-                        { "1": "Wkrótce przejmą kontrolę nad światem"}
+                        { "innerinfo": "Wkrótce przejmą kontrolę nad światem"}
                     ]
                 },
                 {
                     "name": "Ja",
                     "info": [
-                        { "1": "Mam gorzej niż ty"},
-                        { "1": "Mam rację"},
-                        { "1": "To nie ja (zamiennie z: to nie moja wina)"}
+                        { "innerinfo": "Mam gorzej niż ty"},
+                        { "innerinfo": "Mam rację"},
+                        { "innerinfo": "To nie ja (zamiennie z: to nie moja wina)"}
                     ]
                 },
                 {
                     "name": "Karta bankowa (chipowa)",
                     "info": [
-                        { "1": "To jednak bezpieczniej"},
-                        { "1": "Są ludzie, którzy chodzą z czytnikami kart po ulicy)"}
+                        { "innerinfo": "To jednak bezpieczniej"},
+                        { "innerinfo": "Są ludzie, którzy chodzą z czytnikami kart po ulicy)"}
                     ]
                 },
                 {
                     "name": "Kac",
                     "info": [
-                        { "1": "Wysłuchawszy wyznania na temat kaca, niezwłocznie poinformować rozmówcę o swoim najgorszym kacowym doświadczeniu"}
+                        { "innerinfo": "Wysłuchawszy wyznania na temat kaca, niezwłocznie poinformować rozmówcę o swoim najgorszym kacowym doświadczeniu"}
                     ]
                 },
                 {
                     "name": "Każdy temat",
                     "info": [
-                        { "1": "... (tu imię/nazwisko obmawianej osoby) ma zdanie na każdy temat"}
+                        { "innerinfo": "... (tu imię/nazwisko obmawianej osoby) ma zdanie na każdy temat"}
                     ]
                 },
                 {
                     "name": "Kiedyś",
                     "info": [
                         {
-                            "1": "Było lepiej",
-                            "2": ["Zima"]
+                            "innerinfo": "Było lepiej",
+                            "innerlink": ["Zima"]
                         
                         },
                         {
-                            "1": "Narzekało się lepiej"
+                            "innerinfo": "Narzekało się lepiej"
                         }
                     ]
                 },
                 {
                     "name": "Kolejka",
                     "info": [
-                        { "1": "Zawsze, kiedy ja przyjdę"},
-                        { "1": "Znowu jest"},
-                        { "1": "Inni nigdy nie przestrzegają"},
-                        { "1": "Ja zawsze przestrzegam"}
+                        { "innerinfo": "Zawsze, kiedy ja przyjdę"},
+                        { "innerinfo": "Znowu jest"},
+                        { "innerinfo": "Inni nigdy nie przestrzegają"},
+                        { "innerinfo": "Ja zawsze przestrzegam"}
                     ]
                 },
                 {
                     "name": "Ktoś",
                     "info": [
-                        { "1": "Niech coś zrobi"}
+                        { "innerinfo": "Niech coś zrobi"}
                     ]
                 },
                 {
                     "name": "Lepiej",
                     "info": [
-                        { "1": "Już było"}
+                        { "innerinfo": "Już było"}
                     ],
                     "link": "Oni"
                 },
@@ -290,8 +290,8 @@
                     "name": "Los",
                     "info": [
                         {
-                            "1": "Kiedy nie wiadomo co powiedzieć: „masz ci los”",
-                            "2": ["Buty"]
+                            "innerinfo": "Kiedy nie wiadomo co powiedzieć: „masz ci los”",
+                            "innerlink": ["Buty"]
                         
                         }
                     ]
@@ -300,28 +300,28 @@
                     "name": "Mąka",
                     "info": [
                         {
-                            "1": "Biała śmierć",
-                            "2": ["Cukier", "Sól"]
+                            "innerinfo": "Biała śmierć",
+                            "innerlink": ["Cukier", "Sól"]
                         }
                     ]
                 },
                 {
                     "name": "Młodzież",
                     "info": [
-                        { "1": "Dzisiejsza - narzekać na nią („ach, ta dzisiejsza młodzież”)"}
+                        { "innerinfo": "Dzisiejsza - narzekać na nią („ach, ta dzisiejsza młodzież”)"}
                     ]
                 },
                 {
                     "name": "Móc",
                     "info": [
-                        { "1": "Nie móc"}
+                        { "innerinfo": "Nie móc"}
                     ]
                 },
                 {
                     "name": "Najgorzej",
                     "info": [
-                        { "1": "Jest"},
-                        { "1": "Jeszcze trochę i będzie"}
+                        { "innerinfo": "Jest"},
+                        { "innerinfo": "Jeszcze trochę i będzie"}
                     ]
                 },
                 {
@@ -331,273 +331,273 @@
                 {
                     "name": "Niemcy",
                     "info": [
-                        { "1": "Mają pieniądze"},
-                        { "1": "Dorobili się na wojnie"},
-                        { "1": "Mogą sobie pożyć na emeryturze"}
+                        { "innerinfo": "Mają pieniądze"},
+                        { "innerinfo": "Dorobili się na wojnie"},
+                        { "innerinfo": "Mogą sobie pożyć na emeryturze"}
                     ]
                 },
                 {
                     "name": "Nieroby",
                     "info": [
-                        { "1": "Są wszędzie (poza moim miejscem pracy)"},
-                        { "1": "Wszyscy zatrudnieni w sektorze państwowym to nieroby, którzy żyją za cudze pieniądze"}
+                        { "innerinfo": "Są wszędzie (poza moim miejscem pracy)"},
+                        { "innerinfo": "Wszyscy zatrudnieni w sektorze państwowym to nieroby, którzy żyją za cudze pieniądze"}
                     ]
                 },
                 {
                     "name": "Nie tak",
                     "info": [
-                        { "1": "Zawsze coś"}
+                        { "innerinfo": "Zawsze coś"}
                     ]
                 },
                 {
                     "name": "Normalne państwo",
                     "info": [
-                        { "1": "Stosować jako punkt odniesienia przy omawianiu rodzimych patologii (rozpoczynając od: „W normalnym państwie...”)"}
+                        { "innerinfo": "Stosować jako punkt odniesienia przy omawianiu rodzimych patologii (rozpoczynając od: „W normalnym państwie...”)"}
                     ]
                 },
                 {
                     "name": "Odpowiedzialność",
                     "info": [
-                        { "1": "Unikać"}
+                        { "innerinfo": "Unikać"}
                     ]
                 },
                 {
                     "name": "Oni",
                     "info": [
-                        { "1": "Znów coś źle zrobili i trzeba po nich naprawiać"},
-                        { "1": "Dbają tylko o swój interes"},
-                        { "1": "Wpychają się w kolejkę"},
-                        { "1": "Nic nie robią / bawią się za nasze pieniądze"},
-                        { "1": "Są wszystkiemu winni"},
-                        { "1": "Mają lepiej"}
+                        { "innerinfo": "Znów coś źle zrobili i trzeba po nich naprawiać"},
+                        { "innerinfo": "Dbają tylko o swój interes"},
+                        { "innerinfo": "Wpychają się w kolejkę"},
+                        { "innerinfo": "Nic nie robią / bawią się za nasze pieniądze"},
+                        { "innerinfo": "Są wszystkiemu winni"},
+                        { "innerinfo": "Mają lepiej"}
                     ]
                 },
                 {
                     "name": "Oszołomy",
                     "info": [
-                        { "1": "Nie brakuje ich (w zdaniu: „Oszołomów nie brakuje”)"}
+                        { "innerinfo": "Nie brakuje ich (w zdaniu: „Oszołomów nie brakuje”)"}
                     ]
                 },
                 {
                     "name": "Owoce",
                     "info": [
-                        { "1": "Najlepiej sezonowe"},
-                        { "1": "Jeszcze lepiej z własnej działki"},
-                        { "1": "Wystrzegać się pryskanych"},
-                        { "1": "Umyć, bo pryskane"},
-                        { "1": "Najwięcej witamin mają w skórce/pod skórką"}
+                        { "innerinfo": "Najlepiej sezonowe"},
+                        { "innerinfo": "Jeszcze lepiej z własnej działki"},
+                        { "innerinfo": "Wystrzegać się pryskanych"},
+                        { "innerinfo": "Umyć, bo pryskane"},
+                        { "innerinfo": "Najwięcej witamin mają w skórce/pod skórką"}
                     ]
                 },
                 {
                     "name": "Palce",
                     "info": [
                         {
-                            "1": "Przecieka przez nie czas",
-                            "2": ["Czas"]
+                            "innerinfo": "Przecieka przez nie czas",
+                            "innerlink": ["Czas"]
                         },
-                        { "1": "Jak u pianisty"},
-                        { "1": "Zziębnięte"}
+                        { "innerinfo": "Jak u pianisty"},
+                        { "innerinfo": "Zziębnięte"}
                     ]
                 },
                 {
                     "name": "Piątek",
                     "info": [
-                        { "1": "Grunt, że jest"},
-                        { "1": "Piątek, piąteczek, piątunio"}
+                        { "innerinfo": "Grunt, że jest"},
+                        { "innerinfo": "Piątek, piąteczek, piątunio"}
                     ]
                 },
                 {
                     "name": "Pogoda",
                     "info": [
-                        { "1": "Taka, że aż umrzeć się chce"},
-                        { "1": "Pod psem"}
+                        { "innerinfo": "Taka, że aż umrzeć się chce"},
+                        { "innerinfo": "Pod psem"}
                     ],
                     "link": "Biomet"
                 },
                 {
                     "name": "Pieniądze",
                     "info": [
-                        { "1": "Nie mieć"},
-                        { "1": "Żydzi/ Niemcy je mają"},
-                        { "1": "Polacy ich nie mają"},
-                        { "1": "Rząd je kradnie/rozdaje"},
+                        { "innerinfo": "Nie mieć"},
+                        { "innerinfo": "Żydzi/ Niemcy je mają"},
+                        { "innerinfo": "Polacy ich nie mają"},
+                        { "innerinfo": "Rząd je kradnie/rozdaje"},
                         {
-                            "1": "Za nasze – oni nic nie robią / bawią się",
-                            "2": ["Oni"]
+                            "innerinfo": "Za nasze – oni nic nie robią / bawią się",
+                            "innerlink": ["Oni"]
                             }
                     ]
                 },
                 {
                     "name": "Pożyczać",
                     "info": [
-                        { "1": "Nikomu nie pożyczam, wolę dać (oczywiście pieniędzy ani nie daję ani nie pożyczam)"}
+                        { "innerinfo": "Nikomu nie pożyczam, wolę dać (oczywiście pieniędzy ani nie daję ani nie pożyczam)"}
                     ]
                 },
                 {
                     "name": "Praca",
                     "info": [
-                        { "1": "Powiedzieć, że ma się dość, np. „już nie mogę” i dodać „a muszę jeszcze coś zrobić”"}
+                        { "innerinfo": "Powiedzieć, że ma się dość, np. „już nie mogę” i dodać „a muszę jeszcze coś zrobić”"}
                     ]
                 },
                 {
                     "name": "Przed wojną",
                     "info": [
                         {
-                            "1": "Wszystko było lepsze",
-                            "2": ["Wszystko", "Za komuny"]
+                            "innerinfo": "Wszystko było lepsze",
+                            "innerlink": ["Wszystko", "Za komuny"]
                         },
                         {
-                            "1": "Żydzi jedli czosnek",
-                            "2": ["Czosnek", "Żydzi"]
+                            "innerinfo": "Żydzi jedli czosnek",
+                            "innerlink": ["Czosnek", "Żydzi"]
                         }
                     ]
                 },
                 {
                     "name": "Przesada",
                     "info": [
-                        { "1": "Mówić „do przesady” zamiast „bez przesady” - w końcu regionalizm jest w modzie"}
+                        { "innerinfo": "Mówić „do przesady” zamiast „bez przesady” - w końcu regionalizm jest w modzie"}
                     ]
                 },
                 {
                     "name": "Reklamy",
                     "info": [
-                        { "1": "Świąteczne - zaczynają się zaraz po Wszystkich Świętych (to chore), narzekać na szalejący w społeczeństwie konsumpcjonizm"},
-                        { "1": "Polskie miasta są nimi upstrzone"}
+                        { "innerinfo": "Świąteczne - zaczynają się zaraz po Wszystkich Świętych (to chore), narzekać na szalejący w społeczeństwie konsumpcjonizm"},
+                        { "innerinfo": "Polskie miasta są nimi upstrzone"}
                     ]
                 },
                 {
                     "name": "Sens",
                     "info": [
-                        { "1": "Nie ma, inaczej sformułowane: absurd"}
+                        { "innerinfo": "Nie ma, inaczej sformułowane: absurd"}
                     ]
                 },
                 {
                     "name": "Słońce",
                     "info": [
-                        { "1": "Strasznie razi (latem)"},
-                        { "1": "Gdzie się podziało? (zimą)"}
+                        { "innerinfo": "Strasznie razi (latem)"},
+                        { "innerinfo": "Gdzie się podziało? (zimą)"}
                     ]
                 },
                 {
                     "name": "Socjal",
                     "info": [
-                        { "1": "W Anglii mają dobry"},
-                        { "1": "Tu jest beznadziejny"},
-                        { "1": "Imigranci przyjeżdżają na socjal kraść pracę"},
-                        { "1": "Młodzi chcą żyć z socjalu bo są leniwi, ale nie mogą, bo nie wystarcza"}
+                        { "innerinfo": "W Anglii mają dobry"},
+                        { "innerinfo": "Tu jest beznadziejny"},
+                        { "innerinfo": "Imigranci przyjeżdżają na socjal kraść pracę"},
+                        { "innerinfo": "Młodzi chcą żyć z socjalu bo są leniwi, ale nie mogą, bo nie wystarcza"}
                     ]
                 },
                 {
                     "name": "Sól",
                     "info": [
                         {
-                            "1": "Biała śmierć",
-                            "2": ["Cukier", "Mąka"]
+                            "innerinfo": "Biała śmierć",
+                            "innerlink": ["Cukier", "Mąka"]
                         }
                     ]
                 },
                 {
                     "name": "Stres",
                     "info": [
-                        { "1": "Cichy zabójca"},
-                        { "1": "Dywagować nad sposobami radzenia sobie z nim"}
+                        { "innerinfo": "Cichy zabójca"},
+                        { "innerinfo": "Dywagować nad sposobami radzenia sobie z nim"}
                     ]
                 },
                 {
                     "name": "Stołówka",
                     "info": [
-                        { "1": "Narzekać, czasem zwracać uwagę na pozytywy"},
-                        { "1": "„Nowym” zwracać uwagę na pozycje atrakcyjne cenowo"},
-                        { "1": "Odnieść się do sałatek"}
+                        { "innerinfo": "Narzekać, czasem zwracać uwagę na pozytywy"},
+                        { "innerinfo": "„Nowym” zwracać uwagę na pozycje atrakcyjne cenowo"},
+                        { "innerinfo": "Odnieść się do sałatek"}
                     ]
                 },
                 {
                     "name": "Sztuka współczesna ",
                     "info": [
-                        { "1": "Nie rozumieć"},
-                        { "1": "Warto wspomnieć reklamę Skody Oktavii, której akcja toczy się w galerii"},
-                        { "1": "Jak padnie jakieś nazwisko, udawać że się zna"}
+                        { "innerinfo": "Nie rozumieć"},
+                        { "innerinfo": "Warto wspomnieć reklamę Skody Oktavii, której akcja toczy się w galerii"},
+                        { "innerinfo": "Jak padnie jakieś nazwisko, udawać że się zna"}
                     ]
                 },
                 {
                     "name": "Śmierć",
                     "info": [
-                        { "1": "Każdego to spotka"},
+                        { "innerinfo": "Każdego to spotka"},
                         {
-                            "1": "Biała",
-                            "2": ["Cukier", "Mąka", "Sól"]
+                            "innerinfo": "Biała",
+                            "innerlink": ["Cukier", "Mąka", "Sól"]
                         }
                     ]
                 },
                 {
                     "name": "Święta",
                     "info": [
-                        { "1": "Święta, święta i po świętach"}
+                        { "innerinfo": "Święta, święta i po świętach"}
                     ]
                 },
                 {
                     "name": "Temperatura",
                     "info": [
                         {
-                            "1": "Jest za niska ",
-                            "2": ["Ciśnienie"]
+                            "innerinfo": "Jest za niska ",
+                            "innerlink": ["Ciśnienie"]
                         },
                         {
-                            "1": "Jest za wysoka",
-                            "2": ["Ciśnienie"]
+                            "innerinfo": "Jest za wysoka",
+                            "innerlink": ["Ciśnienie"]
                         }
                     ]
                 },
                 {
                     "name": "Tłok",
                     "info": [
-                        { "1": "Zawsze w naszym autobusie, tramwaju, pociągu"},
-                        { "1": "I do tego jakiś menel przysnął"},
-                        { "1": "Na bazarze, akurat kiedy robię zakupy"}
+                        { "innerinfo": "Zawsze w naszym autobusie, tramwaju, pociągu"},
+                        { "innerinfo": "I do tego jakiś menel przysnął"},
+                        { "innerinfo": "Na bazarze, akurat kiedy robię zakupy"}
                     ]
                 },
                 {
                     "name": "Turyści",
                     "info": [
-                        { "1": "Zagraniczni: narzekać na nich w Polsce"},
-                        { "1": "Polscy: narzekać na nich za granicą"},
-                        { "1": "Zachowywać się/nie zachowywać się jak turysta"},
-                        { "1": "Turystyczna konserwa"}
+                        { "innerinfo": "Zagraniczni: narzekać na nich w Polsce"},
+                        { "innerinfo": "Polscy: narzekać na nich za granicą"},
+                        { "innerinfo": "Zachowywać się/nie zachowywać się jak turysta"},
+                        { "innerinfo": "Turystyczna konserwa"}
                     ]
                 },
                 {
                     "name": "Ty",
                     "info": [
                         {
-                            "1": "Masz lepiej niż ja",
-                            "2": ["Ja"]
+                            "innerinfo": "Masz lepiej niż ja",
+                            "innerlink": ["Ja"]
                         },
                         {
-                            "1": "Nie masz racji",
-                            "2": ["Ja"]
+                            "innerinfo": "Nie masz racji",
+                            "innerlink": ["Ja"]
                         }
                     ]
                 },
                 {
                     "name": "Wakacje",
                     "info": [
-                        { "1": "Nareszcie"},
-                        { "1": "Za krótkie"},
-                        { "1": "Za granicą: narzekać na polskich turystów"},
-                        { "1": "W Polsce: narzekać na zagranicznych turystów"},
-                        { "1": "Nawet podczas wakacji myślę o pracy"}
+                        { "innerinfo": "Nareszcie"},
+                        { "innerinfo": "Za krótkie"},
+                        { "innerinfo": "Za granicą: narzekać na polskich turystów"},
+                        { "innerinfo": "W Polsce: narzekać na zagranicznych turystów"},
+                        { "innerinfo": "Nawet podczas wakacji myślę o pracy"}
                     ]
                 },
                 {
                     "name": "Weekend",
                     "info": [
                         {
-                            "1": "Nawet jeśli długi - zawsze za krótki",
-                            "2": ["Wakacje"]
+                            "innerinfo": "Nawet jeśli długi - zawsze za krótki",
+                            "innerlink": ["Wakacje"]
                         },
                         {
-                            "1": "Grunt, że jest",
-                            "2": ["Piątek"]
+                            "innerinfo": "Grunt, że jest",
+                            "innerlink": ["Piątek"]
                         }
                     ]
                 },
@@ -605,8 +605,8 @@
                     "name": "Wiatr",
                     "info": [
                         {
-                            "1": "Polakowi zawsze w oczy",
-                            "2": ["Pieniądze"]
+                            "innerinfo": "Polakowi zawsze w oczy",
+                            "innerlink": ["Pieniądze"]
                         }
                     ]
                 },
@@ -614,12 +614,12 @@
                     "name": "Wszystko",
                     "info": [
                         {
-                            "1": "Jest źle",
-                            "2": ["Źle"]
+                            "innerinfo": "Jest źle",
+                            "innerlink": ["Źle"]
                         },
                         {
-                            "1": "Trzeba zmienić, ale się nie da",
-                            "2": ["Ktoś"]
+                            "innerinfo": "Trzeba zmienić, ale się nie da",
+                            "innerlink": ["Ktoś"]
                         }
                     ] 
                 },
@@ -627,76 +627,76 @@
                     "name": "Za komuny",
                     "info": [
                         {
-                            "1": "Wszystko było lepsze",
-                            "2": ["Przed wojną", "Wszystko"]
+                            "innerinfo": "Wszystko było lepsze",
+                            "innerlink": ["Przed wojną", "Wszystko"]
                         }
                     ] 
                 },
                 {
                     "name": "Zatoki",
                     "info": [
-                        { "1": "Trudno się leczy, leczy się zabiegiem lub kroplami do nosa"},
-                        { "1": "Bolą przy pochylaniu"},
-                        { "1": "Może również boleć od nich ucho"},
-                        { "1": "Punkcja zatok – najgorsza rzecz na świecie"}
+                        { "innerinfo": "Trudno się leczy, leczy się zabiegiem lub kroplami do nosa"},
+                        { "innerinfo": "Bolą przy pochylaniu"},
+                        { "innerinfo": "Może również boleć od nich ucho"},
+                        { "innerinfo": "Punkcja zatok – najgorsza rzecz na świecie"}
                     ]
                 },
                 {
                     "name": "Zdrowie",
                     "info": [
-                        { "1": "Jest najważniejsze"},
-                        { "1": "Koniecznie życzyć go"},
+                        { "innerinfo": "Jest najważniejsze"},
+                        { "innerinfo": "Koniecznie życzyć go"},
                         { 
-                            "1": "Zdrowia, zdrowia i jeszcze raz pieniążków",
-                            "2": ["Pieniądze"]
+                            "innerinfo": "Zdrowia, zdrowia i jeszcze raz pieniążków",
+                            "innerlink": ["Pieniądze"]
                         }
                     ]
                 },
                 {
                     "name": "Zima",
                     "info": [
-                        { "1": "Nawet nie ma śniegu, co to za zima, kiedyś to były zimy, nie to co teraz, święta bez śniegu to gówno nie święta"},
-                        { "1": "Znów zaskoczyła drogowców"}
+                        { "innerinfo": "Nawet nie ma śniegu, co to za zima, kiedyś to były zimy, nie to co teraz, święta bez śniegu to gówno nie święta"},
+                        { "innerinfo": "Znów zaskoczyła drogowców"}
                     ]
                 },
                 {
                     "name": "Zło",
                     "info": [
-                        { "1": "Nie ma takiego, co by nie wyszło na dobre"},
-                        { "1": "Zadać sobie pytanie: „Skąd ono się w ludziach bierze”, refleksyjnie patrząc w dal"}
+                        { "innerinfo": "Nie ma takiego, co by nie wyszło na dobre"},
+                        { "innerinfo": "Zadać sobie pytanie: „Skąd ono się w ludziach bierze”, refleksyjnie patrząc w dal"}
                     ]
                 },
                 {
                     "name": "Znieczulica",
                     "info": [
-                        { "1": "Choroba XXI wieku"},
-                        { "1": "Totalna"}
+                        { "innerinfo": "Choroba XXI wieku"},
+                        { "innerinfo": "Totalna"}
                     ]
                 },
                 {
                     "name": "Źle",
                     "info": [
                         { 
-                            "1": "Było (z wyjątkiem:)",
-                            "2": ["Przed wojną", "Za komuny"]
+                            "innerinfo": "Było [z wyjątkami:]",
+                            "innerlink": ["Przed wojną", "Za komuny"]
                         },
                         { 
-                            "1": "Jest",
-                            "2": ["Najgorzej"]
+                            "innerinfo": "Jest",
+                            "innerlink": ["Najgorzej"]
                         },
                         { 
-                            "1": "Będzie",
-                            "2": ["Gorzej", "Najgorzej"]
+                            "innerinfo": "Będzie",
+                            "innerlink": ["Gorzej", "Najgorzej"]
                         }
                     ]
                 },
                 {
                     "name": "Żydzi",
                     "info": [
-                        { "1": "Nic do nich nie mam, ale"},
-                        { "1": "Są wszędzie"},
-                        { "1": "Kiedyś tu jacyś mieszkali"},
-                        { "1": "Wykupili Polskę"}
+                        { "innerinfo": "Nic do nich nie mam, ale"},
+                        { "innerinfo": "Są wszędzie"},
+                        { "innerinfo": "Kiedyś tu jacyś mieszkali"},
+                        { "innerinfo": "Wykupili Polskę"}
                     ],
                     "link": "Oni"
                 }

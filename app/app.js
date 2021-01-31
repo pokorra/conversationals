@@ -1,5 +1,6 @@
 const api = "http://localhost:3000/base";
 const base = [];
+const list = document.querySelector('.list-container');
 const body = document.querySelector('body');
 
 function createNew(el){
@@ -9,36 +10,64 @@ function append(parent, el){
     return parent.appendChild(el);
 }
 
-fetch(api)
+function showMe(info){
+    console.log(info);
+    let div = createNew('div');
+    div.classList.add('popup-div');
+    let h2 = createNew('h2');
+    h2.innerHTML = info.name;
+    let ul = createNew('ul');
+    ul.classList.add('alg-list')
+    if (info.info) {
+        console.log(info.info);
+        info.info.map(single => {
+        let li = createNew('li');
+        li.innerHTML = single.innerinfo;
+        if (single.innerlink) {
+            single.innerlink.map(singlelink=> {
+                let btnlink = createNew('button');
+                btnlink.classList.add('btn-link');
+                btnlink.innerHTML = singlelink;
+                console.log(singlelink);
+                append(li, btnlink);
+                btnlink.addEventListener('click', ()=> {
+                    console.log(singlelink);
+                })
+            })
+        }
+        console.log(single.innerinfo);
+        append(ul, li);
+    });
+    } else {
+        console.log('bez info');
+    }
+    append(div, h2);
+    append(div, ul);
+    append(body, div);
+}
+
+function getBase(){
+    fetch(api)
     .then(res => res.json())
     .then(data => {
         return data.map(singleData => {
-            console.log(singleData.name);
-            let name = singleData.name;
-            let h2 = createNew('h2');
-            console.log(singleData.info);
-            h2.innerHTML = name;
-            append(body, h2);
+            let inner = singleData.name;
+            let li = createNew('li');
+            let btn = createNew('button');
+            btn.innerHTML = inner;
+            append(li, btn);
+            append(list, li);
+            
+            btn.addEventListener('click', ()=>{
+                showMe(singleData);
+            })
+
         })
 
     })
+};
+getBase();
 
 
-// function getBase() {
-//     const base = [];
-
-//     const promise = fetch(api)
-//     .then(res => {
-//         return res.json()
-//     })
-//     .then(data => {
-//         base.push(data);
-//         console.log(base);
-//     })
-//     .catch(err => console.log('pojawił się error', err));
-
-//     return Promise.all(base);
-// }
-// getBase();
 
 console.log(base);
