@@ -57,12 +57,16 @@ function DisplayList(items, wrapper, itemsPerPage, pageNumber) {
     }
 };
 const showItem = (item, items) => {
+    const newdiv = ` <div class="new-div">
+                        <button class="close-div"> 
+                            <span></span> 
+                        </button>
+                        <h2> ${item.name} </h2>    
+                    </div>`;
     const div = createNew('div');
     div.classList.add('popup-div');
-    const h2 = createNew('h2');
-    h2.innerHTML = item.name;
-    const closingBtn = createNew('button');
-    closingBtn.classList.add('close-div');
+    div.innerHTML = newdiv;
+
     const ul = createNew('ul');
     ul.classList.add('alg-list');
     if (item.info) {
@@ -87,16 +91,11 @@ const showItem = (item, items) => {
     } else {
         console.log('bez infa');
     }
-    
-    append(div, closingBtn);
-    append(div, h2);
+
     append(div, ul);
     append(body, div);
 }
 
-// function ShowMe(singleInfo, arrayInfo){
-//     console.log(singleInfo);
-// }
 
 function Pagination (items, wrapper, itemsPerPage){
     wrapper.innerHTML = '';
@@ -114,8 +113,6 @@ function PaginationButton(page, items){
     button.addEventListener('click', ()=> {
         currentPage = page;
         DisplayList(items, list, itemsPerPage, currentPage);
-
-        // let currentButton = 
         document.querySelector('button.active').classList.remove('active');
         button.classList.add('active');
     })
