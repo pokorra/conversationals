@@ -5,6 +5,7 @@ const base = [];
 const list = document.querySelector('.list-container');
 const paginationBox = document.querySelector('.page-numbers');
 const body = document.querySelector('body');
+const html = document.querySelector('html');
 //pagination variables:
 let currentPage = 1;
 let itemsPerPage = 8;
@@ -41,7 +42,7 @@ function DisplayList(items, wrapper, itemsPerPage, pageNumber) {
     let start = itemsPerPage * pageNumber;
     let end = start + itemsPerPage;
     let paginatedItems = items.slice(start, end);
-    console.log(paginatedItems);
+    // console.log(paginatedItems);
     for (let i = 0; i< paginatedItems.length; i++) {
         let item = paginatedItems[i];
         let li = createNew('li');
@@ -56,16 +57,32 @@ function DisplayList(items, wrapper, itemsPerPage, pageNumber) {
         )
     }
 };
+
+
 const showItem = (item, items) => {
     const newdiv = ` <div class="new-div">
-                        <button class="close-div"> 
-                            <span></span> 
-                        </button>
+                     
                         <h2> ${item.name} </h2>    
                     </div>`;
-    const div = createNew('div');
-    div.classList.add('popup-div');
-    div.innerHTML = newdiv;
+    const bigDiv = createNew('div');
+    bigDiv.classList.add('popup-div');
+    bigDiv.innerHTML = newdiv;
+    
+        // const h2 = createNew('h2');
+    // h2.innerHTML = item.name;
+    const closingBtn = createNew('button');
+    closingBtn.classList.add('close-div');
+    closingBtn.onclick = function(closingBtn){
+        body.removeChild(closingBtn.target.parentNode);
+    }
+    window.onclick = function(event) {
+        if (event.target === html) {
+            //to działa przy założeniu, że bigDiv popup-div pozostaje ostatnim dzieckiem body
+            body.removeChild(body.lastChild);
+        }
+    }
+    append(bigDiv, closingBtn);
+    // append(div, h2);
 
     const ul = createNew('ul');
     ul.classList.add('alg-list');
@@ -92,8 +109,8 @@ const showItem = (item, items) => {
         console.log('bez infa');
     }
 
-    append(div, ul);
-    append(body, div);
+    append(bigDiv, ul);
+    append(body, bigDiv);
 }
 
 
