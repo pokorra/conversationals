@@ -16,7 +16,21 @@ function createNew(el){
 function append(parent, el){
     return parent.appendChild(el);
 }
+//otwieranie powiązanych haseł
+function showLinkedItem (itemName, items) {
+    const newItem = items.find( ({name}) => name === itemName);
+    showItem(newItem, items);
+}
 
+//zamykanie popupu
+const closePopup = () => {
+    const openDivs = document.querySelectorAll('.popup-div');
+    openDivs.forEach(eachDiv => {
+        body.removeChild(eachDiv);
+    })
+}
+
+//duże funkcje:
 
 //fetching data from api
 function getBase(){
@@ -30,11 +44,8 @@ function getBase(){
        
         DisplayList(base, list, itemsPerPage, currentPage);
         Pagination(base, paginationBox, itemsPerPage);
- 
     })
 };
-// Pagination(base, paginationBox, itemsPerPage);
-
 
 function DisplayList(items, wrapper, itemsPerPage, pageNumber) {
     wrapper.innerHTML = '';
@@ -42,7 +53,6 @@ function DisplayList(items, wrapper, itemsPerPage, pageNumber) {
     let start = itemsPerPage * pageNumber;
     let end = start + itemsPerPage;
     let paginatedItems = items.slice(start, end);
-    // console.log(paginatedItems);
     for (let i = 0; i< paginatedItems.length; i++) {
         let item = paginatedItems[i];
         let li = createNew('li');
@@ -53,37 +63,30 @@ function DisplayList(items, wrapper, itemsPerPage, pageNumber) {
 
         button.addEventListener('click',
             ()=> { showItem(item, items)}
-    
         )
     }
 };
 
 
 const showItem = (item, items) => {
-    const newdiv = ` <div class="new-div">
-                     
+    const newdiv = ` <div class="new-div">                     
                         <h2> ${item.name} </h2>    
                     </div>`;
     const bigDiv = createNew('div');
     bigDiv.classList.add('popup-div');
     bigDiv.innerHTML = newdiv;
-    
-        // const h2 = createNew('h2');
-    // h2.innerHTML = item.name;
+
     const closingBtn = createNew('button');
     closingBtn.classList.add('close-div');
-    closingBtn.onclick = function(closingBtn){
-        body.removeChild(closingBtn.target.parentNode);
-    }
+    closingBtn.onclick = ()=> closePopup();
     window.onclick = function(event) {
         if (event.target === html) {
-            //to działa przy założeniu, że bigDiv popup-div pozostaje ostatnim dzieckiem body
-            body.removeChild(body.lastChild);
+            closePopup();
         }
     }
     append(bigDiv, closingBtn);
-    // append(div, h2);
 
+    //lista algorytmów
     const ul = createNew('ul');
     ul.classList.add('alg-list');
     if (item.info) {
@@ -91,28 +94,35 @@ const showItem = (item, items) => {
             const li = createNew('li');
             li.innerHTML = single.innerinfo;
             if (single.innerlink) {
-                
+                //tutaj odnośnik do haseł powiązanych
                 single.innerlink.map(singlelink=> {
                     const btnlink = createNew('button');
                     btnlink.classList.add('btn-link');
-                    btnlink.innerHTML = singlelink;
-                    console.log(singlelink);
+                    btnlink.innerHTML = `Zobacz też: ${singlelink}`;
                     append(li, btnlink);
                     btnlink.addEventListener('click', ()=> {
-                        console.log(singlelink);
+                        showLinkedItem(singlelink, items);
                     })
                 })
             }
             append(ul, li);
+            
         })
-    } else {
-        console.log('bez infa');
-    }
+        append(bigDiv, ul);
+    };
 
-    append(bigDiv, ul);
+    if (item.link) {
+        const itemLink = createNew('button');
+        itemLink.classList.add('item-link');
+        itemLink.innerHTML = `Zobacz też: ${item.link}`;
+        itemLink.addEventListener('click', ()=> {
+            showLinkedItem(item.link, items);
+        })
+        bigDiv.appendChild(itemLink);
+     }
+    // append(bigDiv, ul);
     append(body, bigDiv);
 }
-
 
 function Pagination (items, wrapper, itemsPerPage){
     wrapper.innerHTML = '';

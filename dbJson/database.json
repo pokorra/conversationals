@@ -80,16 +80,16 @@
                     ]
                 },
                 {
-                    "name": "Ciśnienie",
-                    "link": "Temperatura"
-                },
-                {
                     "name": "Chęci",
                     "info": [
                         { "innerinfo": "Nie mieć (obowiązki)"},
                         { "innerinfo": "Mieć (spanie, jedzenie)"},
                         { "innerinfo": "Dobrymi piekło jest wybrukowane"}
                     ]
+                },
+                {
+                    "name": "Ciśnienie",
+                    "link": "Temperatura"
                 },
                 {
                     "name": "Cukier",
@@ -102,7 +102,7 @@
                             "innerinfo": "Jest we wszystkim"
                         },
                         {
-                            "innerinfo": "Kiedyś pożyczało się"
+                            "innerinfo": "Kiedyś to się pożyczało"
                         },
                         {
                             "innerinfo": "Dzisiaj jest wypierany przez słodziki"
@@ -184,7 +184,7 @@
                 {
                     "name": "Gazociąg",
                     "info": [
-                        { "innerinfo": "Źle jak idzie przez działkę"},
+                        { "innerinfo": "Źle, jak idzie przez działkę"},
                         { "innerinfo": "Putin na złość ominął Polskę gazociągiem"}
                     ]
                 },
@@ -208,7 +208,7 @@
                     "name": "Gluten",
                     "info": [
                         { "innerinfo": "Jest we wszystkim"},
-                        { "innerinfo": "Osoby, które go nie jedzą mają trudne życie"}
+                        { "innerinfo": "Osoby, które go nie jedzą, mają trudne życie"}
                     ]
                 },
                 {
@@ -236,7 +236,7 @@
                     "name": "Karta bankowa (chipowa)",
                     "info": [
                         { "innerinfo": "To jednak bezpieczniej"},
-                        { "innerinfo": "Są ludzie, którzy chodzą z czytnikami kart po ulicy)"}
+                        { "innerinfo": "Są ludzie, którzy chodzą z czytnikami kart po ulicy"}
                     ]
                 },
                 {
@@ -248,7 +248,7 @@
                 {
                     "name": "Każdy temat",
                     "info": [
-                        { "innerinfo": "... (tu imię/nazwisko obmawianej osoby) ma zdanie na każdy temat"}
+                        { "innerinfo": "(Podać imię/nazwisko obmawianej osoby) ma zdanie na każdy temat"}
                     ]
                 },
                 {
@@ -256,8 +256,7 @@
                     "info": [
                         {
                             "innerinfo": "Było lepiej",
-                            "innerlink": ["Zima"]
-                        
+                            "innerlink": ["Zima"]                        
                         },
                         {
                             "innerinfo": "Narzekało się lepiej"
