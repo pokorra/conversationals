@@ -6,6 +6,9 @@ const list = document.querySelector('.list-container');
 const paginationBox = document.querySelector('.page-numbers');
 const body = document.querySelector('body');
 const html = document.querySelector('html');
+//searching variables:
+const searchInput = document.querySelector('.search');
+const suggestions = document.querySelector('.suggestions');
 //pagination variables:
 let currentPage = 1;
 let itemsPerPage = 8;
@@ -30,8 +33,7 @@ const closePopup = () => {
     })
 }
 
-//duże funkcje:
-
+//DUŻE FUNKCJE:
 //fetching data from api
 function getBase(){
     fetch(api)
@@ -66,7 +68,6 @@ function DisplayList(items, wrapper, itemsPerPage, pageNumber) {
         )
     }
 };
-
 
 const showItem = (item, items) => {
     const newdiv = ` <div class="new-div">                     
@@ -105,8 +106,7 @@ const showItem = (item, items) => {
                     })
                 })
             }
-            append(ul, li);
-            
+            append(ul, li);   
         })
         append(bigDiv, ul);
     };
@@ -148,5 +148,31 @@ function PaginationButton(page, items){
 
 getBase();
 
+function findPlaces(wordToFind, base){
+    return base.filter(baseItem => {
+        const regex = new RegExp(wordToFind, 'gi');
+        return baseItem.name.match(regex) ;
+    })
+}
+
+function displayNamesInput(){
+    const matchInBase = findPlaces(this.value, base);
+    const list = matchInBase.map(match => {
+        if(this.value === '') {return;}
+        const li = createNew('li');
+        li.classList.add('list-from-form');
+        li.innerHTML = match.name;
+        console.log(li)
+        // append(suggestions, li);
+        return li;
+        // ` <li class='list-from-form' > ${btn}</li>`;
+    // });
+    }).join('');
+    console.log(list);
+    
+    suggestions.innerHTML = list;
+}
+
+searchInput.addEventListener('keyup', displayNamesInput);
 
 });
