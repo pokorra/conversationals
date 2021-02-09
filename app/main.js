@@ -20,9 +20,12 @@ function append(parent, el){
     return parent.appendChild(el);
 }
 //otwieranie powiązanych haseł
-function showLinkedItem (itemName, items) {
+window.showLinkedItem = (itemName) => {
+    const items = base;
     const newItem = items.find( ({name}) => name === itemName);
-    showItem(newItem, items);
+    showItem(newItem);
+    searchInput.value = '';
+    suggestions.innerHTML = '';
 }
 
 //zamykanie popupu
@@ -42,10 +45,10 @@ function getBase(){
         {
          data.forEach(each => {
             base.push(each);
-        });
-       
+        });       
         DisplayList(base, list, itemsPerPage, currentPage);
         Pagination(base, paginationBox, itemsPerPage);
+        searchInput.addEventListener('keyup', displayNamesInput);
     })
 };
 
@@ -62,21 +65,19 @@ function DisplayList(items, wrapper, itemsPerPage, pageNumber) {
         button.innerHTML = item.name;
         append(li, button)
         append(wrapper, li);
-
         button.addEventListener('click',
-            ()=> { showItem(item, items)}
+            ()=> { showItem(item)}
         )
     }
 };
 
-const showItem = (item, items) => {
+const showItem = (item) => {
     const newdiv = ` <div class="new-div">                     
                         <h2> ${item.name} </h2>    
                     </div>`;
     const bigDiv = createNew('div');
     bigDiv.classList.add('popup-div');
     bigDiv.innerHTML = newdiv;
-
     const closingBtn = createNew('button');
     closingBtn.classList.add('close-div');
     closingBtn.onclick = ()=> closePopup();
@@ -102,7 +103,7 @@ const showItem = (item, items) => {
                     btnlink.innerHTML = `Zobacz też: ${singlelink}`;
                     append(li, btnlink);
                     btnlink.addEventListener('click', ()=> {
-                        showLinkedItem(singlelink, items);
+                        showLinkedItem(singlelink);
                     })
                 })
             }
@@ -116,11 +117,10 @@ const showItem = (item, items) => {
         itemLink.classList.add('item-link');
         itemLink.innerHTML = `Zobacz też: ${item.link}`;
         itemLink.addEventListener('click', ()=> {
-            showLinkedItem(item.link, items);
+            showLinkedItem(item.link);
         })
-        bigDiv.appendChild(itemLink);
+        append(bigDiv, itemLink);
      }
-    // append(bigDiv, ul);
     append(body, bigDiv);
 }
 
@@ -146,8 +146,6 @@ function PaginationButton(page, items){
     return button;
 }
 
-getBase();
-
 function findPlaces(wordToFind, base){
     return base.filter(baseItem => {
         const regex = new RegExp(wordToFind, 'gi');
@@ -161,18 +159,16 @@ function displayNamesInput(){
         if(this.value === '') {return;}
         const li = createNew('li');
         li.classList.add('list-from-form');
-        li.innerHTML = match.name;
-        console.log(li)
-        // append(suggestions, li);
-        return li;
-        // ` <li class='list-from-form' > ${btn}</li>`;
-    // });
-    }).join('');
-    console.log(list);
-    
+        const innerName = match.name;
+        return ` <li class='list-from-form'> 
+                    <button onclick=showLinkedItem('${match.name}')> ${match.name} </button> 
+                </li>`;
+    }).join('');  
     suggestions.innerHTML = list;
 }
 
-searchInput.addEventListener('keyup', displayNamesInput);
+
+getBase();
+
 
 });
