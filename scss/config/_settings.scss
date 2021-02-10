@@ -1,16 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Lato:wght@400;700&display=swap');
 
-$title-font: 'Berkshire Swash', cursive;
-$main-font: 'Lato', sans-serif;
-
-$side-color: #d8d8d8;
-$font-color: rgb(70, 70, 70);
-
 $default-margin: 10px;
 
-@mixin centerflex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
