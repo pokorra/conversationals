@@ -20,9 +20,14 @@ function append(parent, el){
     return parent.appendChild(el);
 }
 //otwieranie powiązanych haseł
-window.showLinkedItem = (itemName) => {
-    const items = base;
-    const newItem = items.find( ({name}) => name === itemName);
+const showLinkedItem = (itemName) => {
+    const newItem = base.find( ({name}) => name === itemName);
+    showItem(newItem);
+}
+//co z hasłami dwuwyrazowymi?
+window.showItemFromList = (itemName) => {
+    console.log(itemName);
+    const newItem = base.find( ({name}) => name === itemName);
     showItem(newItem);
     searchInput.value = '';
     suggestions.innerHTML = '';
@@ -41,8 +46,7 @@ const closePopup = () => {
 function getBase(){
     fetch(api)
     .then(res => res.json())
-    .then(data => 
-        {
+    .then(data => {
          data.forEach(each => {
             base.push(each);
         });       
@@ -71,7 +75,7 @@ function DisplayList(items, wrapper, itemsPerPage, pageNumber) {
     }
 };
 
-const showItem = (item) => {
+window.showItem = (item) => {
     const newdiv = ` <div class="new-div">                     
                         <h2> ${item.name} </h2>    
                     </div>`;
@@ -149,7 +153,7 @@ function PaginationButton(page, items){
 function findPlaces(wordToFind, base){
     return base.filter(baseItem => {
         const regex = new RegExp(wordToFind, 'gi');
-        return baseItem.name.match(regex) ;
+        return baseItem.name.match(regex);
     })
 }
 
@@ -157,16 +161,13 @@ function displayNamesInput(){
     const matchInBase = findPlaces(this.value, base);
     const list = matchInBase.map(match => {
         if(this.value === '') {return;}
-        const li = createNew('li');
-        li.classList.add('list-from-form');
-        const innerName = match.name;
+        const stringified = JSON.stringify(match.name);
         return ` <li class='list-from-form'> 
-                    <button onclick=showLinkedItem('${match.name}')> ${match.name} </button> 
+                    <button  onclick=showItemFromList('${match.name}')> ${match.name} </button> 
                 </li>`;
     }).join('');  
     suggestions.innerHTML = list;
 }
-
 
 getBase();
 

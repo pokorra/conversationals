@@ -273,6 +273,18 @@
                     ]
                 },
                 {
+                    "name": "Komuna",
+                    "info": [
+                        {
+                            "innerinfo": "Za komuny wszystko było lepsze",
+                            "innerlink": ["Przed wojną", "Wszystko"]
+                        },
+                        {
+                            "innerinfo": "Za komuny nic nie było"
+                        }
+                    ] 
+                },
+                {
                     "name": "Ktoś",
                     "info": [
                         { "innerinfo": "Niech coś zrobi"}
@@ -619,15 +631,6 @@
                         {
                             "innerinfo": "Trzeba zmienić, ale się nie da",
                             "innerlink": ["Ktoś"]
-                        }
-                    ] 
-                },
-                {
-                    "name": "Za komuny",
-                    "info": [
-                        {
-                            "innerinfo": "Wszystko było lepsze",
-                            "innerlink": ["Przed wojną", "Wszystko"]
                         }
                     ] 
                 },
