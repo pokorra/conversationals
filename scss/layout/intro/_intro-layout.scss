@@ -1,0 +1,12 @@
+.intro {
+    position: relative;    
+}
+
+.intro-inner {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    position: absolute;
+}
