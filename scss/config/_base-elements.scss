@@ -3,19 +3,17 @@
     padding: 0;
     box-sizing: border-box;
     font-family: $main-font;
-    font-size: 13px;
     color: $font-color;
     transition: .5s;
 }
 
 body {
-    background-color: whitesmoke;
+    background-color: $darkergreen-color ;
 }
 
 h1, h2, h3 {
-    // font-family: $title-font;
+    font-family: $title-font;
 }
-
 
 a {
     text-decoration: none;
@@ -25,13 +23,10 @@ a {
 button {
     background-color: inherit;
     cursor: pointer;
-    border: 1px solid grey;
+    border: none;
     &:hover {
         background-color: inherit;
     }
 }
 
-.section {
-    min-height: 40vh;
-    margin: $default-margin*2 0 $default-margin;
-}
+

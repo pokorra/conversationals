@@ -1,39 +1,80 @@
-.intro, .intro-inner {
-    width: 100vw;
-    height: 100vh;
+.intro {
+    position: relative;
+    
 }
 
 .intro-inner {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-wrap: nowrap;
-    position: relative;
+    position: absolute;
 }
-
+//first intro
+.first-inner {
+    flex-direction: column;
+    background-color: $red-color;
+    display:none;
+    h1 {
+        position: absolute;
+        font-size: 2em;
+        text-transform: capitalize;
+        text-align: center;
+        // top: 30vh;
+        span {
+            position: absolute;
+            font-family: inherit;
+            width: 100vw;
+        }
+        span:first-of-type {
+            top: 30vh;
+        }
+        span:last-of-type {
+            top: 60vh;
+        }
+    }
+}
 .half-first {
-    width: 50%;
+    width: 100%;
     height: 100%;
     background-color: $darkgreen-color;
 }
 .half-second {
-    width: 50%;
+    width: 100%;
     height: 100%;
     background-color: $green-color;
 }
 
 //second-intro
 .second-inner {
+    display: none;
     justify-content: center;
     align-items: center;
+    background-color: $side-color;
+    background: linear-gradient(180deg, $lightgreen-color 0%, $lightgreen-color 35%, $green-color 37%, $darkgreen-color 58%, $darkergreen-color 85%);
 }
 .chat {
-    width: 50vw;
-    height: 50vw;
+    width: 70vw;
+    height: 70vw;
     @include centerflex;
 }
 #chatty {
     width: 100%;
 }
 
+
+//third intro
+.third-inner {
+    article {
+        width: 75vw;
+        margin: 10vh auto;
+        font-size: 4.5vw;
+        span {
+            font-weight: bold;
+        }
+    }    
+}
 .link-box {
     position: absolute;
     width: 50vw;
@@ -45,19 +86,74 @@
         height: 100%;
         display: block;
     }
-}
-
-@media only screen and (min-width: 700px) {
-    .link-box {
-        bottom: 20vw;
+    .cta-link {
+        font-size: 1.2em;
+        border: 1px solid $font-color;
     }
 }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 700px) and (orientation: portrait) {
+    .first-inner {
+        h1 {
+            font-size: 3.5em;
+        }
+    }
+    
+    .chat {
+        width: 50vw;
+        height: 50vw;
+    }
+
+    .third-inner {
+        article {
+            width: 75vw;
+            margin: 10vh auto;
+            font-size: 4.5vw;
+            span {
+                font-weight: bold;
+            }
+        }    
+    }
+    .link-box {
+        bottom: 20vw;
+        .cta-link {
+            font-size: 2em;
+        }
+    }
+}
+
+@media only screen and (min-width: 700px) and (orientation: landscape) {
+    
+    .first-inner {
+        flex-direction: row;
+        h1 {
+            font-size: 3em;
+        }
+    }
+    .half-first, .half-second {
+        width: 50%;
+    }
+    .chat {
+        max-width: 600px;
+        max-height: 600px;
+    }
+    .third-inner {
+        article {
+            width: 65vw;
+            margin: auto auto 30vh 5vw;
+            font-size: 4.5vh;
+            span {
+                font-weight: bold;
+            }
+        }    
+    }
     .link-box {
         width: 50vh;
         height: 10vh;
-        bottom: 30vh;
+        bottom: 20vh;
         right: 10vh;
+        .cta-link {
+            font-size: 2em;
+        }
     }
 }
