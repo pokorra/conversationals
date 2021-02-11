@@ -1,5 +1,6 @@
 .third-inner {
     background-color: $side-color;
+    opacity: 0;
     &::before {
         content: '';
         position: absolute;
@@ -21,19 +22,19 @@
         right: 0vw;
         transform: rotate(35deg);
     }
-
-    article {
-        width: 75vw;
-        margin: 10vh auto auto ;
-        font-size: 5vw;
-        padding: .5em;
-        border-radius: 15px;
-        z-index: 3;
-        span {
-            font-weight: bold;
-        }
-    }    
 }
+article {
+    width: 75vw;
+    margin: 10vh auto auto ;
+    font-size: 5vw;
+    padding: .5em;
+    border-radius: 15px;
+    z-index: 3;
+    span {
+        font-weight: bold;
+    }
+}    
+
 .link-box {
     position: absolute;
     width: 50vw;
@@ -82,17 +83,15 @@
     }
 }
 
-@media only screen and (min-width: 700px) and (orientation: portrait) {
-    .third-inner {
-        article {
-            width: 75vw;
-            margin: 10vh auto auto;
-            font-size: 4.5vw;
-            span {
-                font-weight: bold;
-            }
-        }    
-    }
+@media only screen and (min-width: 700px) and (orientation: portrait) {    
+    article {
+        width: 75vw;
+        margin: 10vh auto auto;
+        font-size: 4.5vw;
+        span {
+            font-weight: bold;
+        }
+    }    
     .link-box {
         bottom: 15vw;
         .cta-link {
@@ -104,26 +103,23 @@
 @media only screen and (min-width: 700px) and (orientation: landscape) {
     .third-inner {
         &::before {
-            //jasny
             height: 45vh;
             transform-origin: left top;
             transform: rotate(55deg);
         }
         &::after {
-            //ciemny
             bottom: -15vh;
             right: 0vw;
             transform: rotate(20deg);
+        }       
+    }
+    article {
+        width: 65vw;
+        margin: auto auto 30vh 10vw;
+        font-size: 4.5vh;
+        span {
+            font-weight: bold;
         }
-
-        article {
-            width: 65vw;
-            margin: auto auto 30vh 10vw;
-            font-size: 4.5vh;
-            span {
-                font-weight: bold;
-            }
-        }    
     }
     .link-box {
         width: 50vh;
@@ -132,6 +128,14 @@
         right: 10vh;
         .cta-link {
             font-size: 2em;
+        }
+    }
+}
+
+@media only screen and (min-width: 1600px) and (orientation: landscape) {
+    .link-box {
+        .cta-link {
+            border: 3px solid;
         }
     }
 }

@@ -1,5 +1,6 @@
 .second-inner {
-    display: none;
+    // display: none;
+    left: -100vw;
     justify-content: center;
     align-items: center;
     background: linear-gradient(180deg, $lightgreen-color 0%, $lightgreen-color 35%, $green-color 37%, $darkgreen-color 58%, $darkergreen-color 85%);
@@ -33,6 +34,7 @@
 }
 
 .stamp {
+    display: none;
     position: absolute;
     z-index: 5;
     color: $red-color;
