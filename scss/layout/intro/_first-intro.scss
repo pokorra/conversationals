@@ -1,7 +1,6 @@
 .first-inner {
     flex-direction: column;
     background-color: $red-color;
-    // display:none;
     h1 {
         position: absolute;
         font-size: 2em;
@@ -23,12 +22,10 @@
 }
 .half-first {
     width: 100%;
-    // height: 100%;
     background-color: $darkgreen-color;
 }
 .half-second {
     width: 100%;
-    // height: 100%;
     background-color: $green-color;
 }
 

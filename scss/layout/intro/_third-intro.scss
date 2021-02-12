@@ -17,7 +17,7 @@
         position: absolute;
         background-color: $darkergreen-color;
         width: 150vw;
-        height: 25vh;
+        height: 30vh;
         bottom: -10vh;
         right: 0vw;
         transform: rotate(35deg);
@@ -59,12 +59,12 @@ article {
             top: 0;
             left: 0;
             background-color: $darkergreen-color;
-            transform: translateX(-3vw);
+            transform: translateX(-7vw) ;
         }
     }
     .cta-link:hover {
         &::after {
-            animation: hover-btn .5s ease-in ;
+            animation: hover-btn .3s ease-in 2;
         }
     }
     
@@ -73,13 +73,13 @@ article {
 
 @keyframes hover-btn {
     0% {
-        transform: translateX(-3vw);
+        transform: translateX(-7vw) ;
     }
     50% { 
         width: 54vw;
     }
     100% {
-        transform: translateX(54vw);
+        transform: translateX(54vw) ;
     }
 }
 
@@ -108,7 +108,7 @@ article {
             transform: rotate(55deg);
         }
         &::after {
-            bottom: -15vh;
+            bottom: -20vh;
             right: 0vw;
             transform: rotate(20deg);
         }       

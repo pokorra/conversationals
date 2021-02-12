@@ -1,0 +1,63 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $green-color;
+    height: 7vh;
+    overflow: hidden;
+}
+h1 {
+    padding: 1vh 2vh;
+    width: 55vw;
+    height: 7vh;
+    font-size: 4vh;
+    background-color: $lightgreen-color;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 15vw;
+        height: 100%;
+        background-color: $lightgreen-color;
+        top: 0;
+        right: -3vw;
+        transform: skew(20deg);
+        transition: .6s ease-in-out;
+    }
+}
+h1:hover{
+    &::after {
+        right: -50vw;
+        width: 55vw;
+    }
+}
+
+nav {
+    padding: 1vh 2vh;
+    svg {
+        width: 5vh;
+        height: 5vh;
+        position: relative;
+        z-index: 5;
+        &:hover {
+            animation: roll .7s linear infinite;
+        }
+    }
+    ul {
+        list-style: none;
+        display: none;
+    }
+}
+
+@keyframes roll {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@media only screen and (min-width: 700px) and (orientation: portrait) {
+
+}
+
+@media only screen and (min-width: 700px) and (orientation: landscape) {
+    
+}
