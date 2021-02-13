@@ -1,31 +1,41 @@
+.page-body {
+ 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: $green-color;
-    height: 7vh;
+    height: 9vh;
     overflow: hidden;
 }
 h1 {
     padding: 1vh 2vh;
     width: 55vw;
-    height: 7vh;
-    font-size: 4vh;
-    background-color: $lightgreen-color;
+    height: 9vh;
+    font-size: 5.5vh;
+    background-color: $red-color;
     position: relative;
+    color: $side-color;
+    span {
+        font-family: inherit;
+        opacity: 0;
+        transition: .2s ease;
+    }
     &::after {
         content: '';
         position: absolute;
-        width: 15vw;
-        height: 100%;
-        background-color: $lightgreen-color;
+        width: 0vw;
         top: 0;
-        right: -3vw;
-        transform: skew(20deg);
+        left: 55vw;
+        border-bottom: 9vh solid $red-color;
+        border-right: 10vw solid $green-color;
         transition: .6s ease-in-out;
     }
 }
 h1:hover{
+    span {
+        opacity: 1;
+    }
     &::after {
         right: -50vw;
         width: 55vw;
@@ -41,6 +51,9 @@ nav {
         z-index: 5;
         &:hover {
             animation: roll .7s linear infinite;
+            #spiral {
+                fill: $side-color;
+            }
         }
     }
     ul {
@@ -48,6 +61,8 @@ nav {
         display: none;
     }
 }
+}
+
 
 @keyframes roll {
     from {transform: rotate(0deg);}
@@ -55,9 +70,13 @@ nav {
 }
 
 @media only screen and (min-width: 700px) and (orientation: portrait) {
+    .page-body {
 
+    }
 }
 
 @media only screen and (min-width: 700px) and (orientation: landscape) {
-    
+    .page-body {
+        
+    }
 }
