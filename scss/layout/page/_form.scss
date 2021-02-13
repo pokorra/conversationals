@@ -1,10 +1,68 @@
-.search-form {
+.page-body {
+    .search-form {
+        position: absolute;
+        width: 50vw;
+        height: 5vh;
+        right: 0;
+        margin: 2vw;
+        z-index: 1;
+        input {
+            width: 100%;
+            height: 100%;
+            border: 2px solid $green-color;
+            background-color: $side-color;
+            padding-left: 1vw;
+        }
+    }
+    
+    .suggestions {
+        list-style: none;
+        max-height: 60vh;
+        overflow: auto;
+        li {
+            button {
+                width: 100%;
+                height: 100%;
+                margin-top: .5vh;
+                padding: 2px 4px;
+                font-size: 13px;
+                background-color: $yellow-color;
+                transition: .2s;
+                &:hover {
+                    background-color: $green-color;
+                    color: $side-color;
+                }
+            }
+        }
+    }
 
 }
 
-.suggestions {
 
-    li {
+@media only screen and (min-width: 700px) and (orientation: portrait) {
+    .page-body {
+        .search-form input {
+            font-size: 15px;
+        }
+        .suggestions li button{
+            font-size: 15px;
+        }
+    }
+}
+
+@media only screen and (min-width: 700px) and (orientation: landscape) {
+    .page-body {
+        .search-form {
+            width: 35vw;
+            max-width: 350px;
+            input {
+            font-size: 15px;
+        }
+        }
         
+        .suggestions li button{
+            font-size: 15px;
+            padding: 4px;
+        }
     }
 }

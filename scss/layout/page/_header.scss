@@ -8,37 +8,35 @@ header {
     height: 9vh;
     overflow: hidden;
 }
-h1 {
+.page-name {
     padding: 1vh 2vh;
-    width: 55vw;
+    width: 35vw;
     height: 9vh;
-    font-size: 5.5vh;
+    // font-size: 5.5vh;
     background-color: $red-color;
     position: relative;
-    color: $side-color;
-    span {
-        font-family: inherit;
-        opacity: 0;
-        transition: .2s ease;
-    }
+    
     &::after {
         content: '';
         position: absolute;
         width: 0vw;
         top: 0;
-        left: 55vw;
-        border-bottom: 9vh solid $red-color;
+        left: 35vw;
+        border-bottom: 9.1vh solid $red-color;
         border-right: 10vw solid $green-color;
         transition: .6s ease-in-out;
     }
-}
-h1:hover{
-    span {
-        opacity: 1;
+    h1 {
+        font-size: 6vh;
+        color: $side-color;
+        position: relative;
+        z-index: 3;
     }
+}
+.page-name:hover{
     &::after {
         right: -50vw;
-        width: 55vw;
+        width: 70vw;
     }
 }
 
