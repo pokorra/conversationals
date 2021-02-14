@@ -6,12 +6,21 @@ const list = document.querySelector('.list-container');
 const paginationBox = document.querySelector('.page-numbers');
 const body = document.querySelector('body');
 const html = document.querySelector('html');
+const menuBtn = document.querySelector('.menu-btn');
+const navList = document.querySelector('#nav-list');
 //searching variables:
 const searchInput = document.querySelector('.search');
 const suggestions = document.querySelector('.suggestions');
 //pagination variables:
 let currentPage = 1;
 let itemsPerPage = 8;
+
+//rozwijanie menu
+menuBtn.addEventListener('click', ()=> {
+    navList.classList.contains('rolled-up') ?
+    navList.classList.replace('rolled-up', 'nav-list') : navList.classList.replace('nav-list', 'rolled-up');
+})
+
 
 function createNew(el){
     return document.createElement(el);

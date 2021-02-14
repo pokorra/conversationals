@@ -2,12 +2,15 @@
     position: absolute;
     width: 70vw;
     height: 70vh;
+    top: 0;
     z-index: 3;
 
     margin: 15vh 15vw;
     box-shadow: 5px 5px 15px rgb(128, 128, 128), 3px 3px 20px rgb(80, 80, 80);
     background-color: #357451;
     border-radius: 10px;
+
+    background: radial-gradient(circle, $green-color 0%, $darkgreen-color 80%);
 
     display: flex;
     flex-direction: column;

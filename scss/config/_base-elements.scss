@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: $main-font;
     color: $font-color;
+    font-size: 13px;
     transition: .5s;
 }
 
@@ -30,4 +31,17 @@ button {
     }
 }
 
+.hidden {
+    display: none;
+}
 
+@media only screen and (min-width: 700px) and (orientation: portrait) {
+    * {
+        font-size: 15px;
+    }
+}
+@media only screen and (min-width: 700px) and (orientation: landscape) {
+    * {
+        font-size: 15px;
+    }
+}

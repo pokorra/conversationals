@@ -1,12 +1,11 @@
 .paginated-items {
-    position: absolute;
-    height: 50vh;
-    width: 30vw;
+    position: relative;
+    margin: 0 auto;
+    height: 55vh;
+    width: 70vw;
+    top: 15vh;
     overflow: auto;
-    right: 50vw;
-    top: 30vh;
-    transform: translate(50%, -10%);
-
+    border: 1px solid $red-color;
 }
 
 .list-container {
@@ -29,6 +28,8 @@
     }
 }
 .page-numbers {
+    position: absolute;
+    bottom: 2px;
     border: 2px solid cornflowerblue;
     margin: 10px 0;
     display: flex;
