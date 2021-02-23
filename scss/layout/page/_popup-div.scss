@@ -6,7 +6,8 @@
     z-index: 3;
 
     margin: 15vh 15vw;
-    box-shadow: 5px 5px 15px rgb(128, 128, 128), 3px 3px 20px rgb(80, 80, 80);
+    color: $grey-color;
+    box-shadow: 5px 5px 15px $grey-color, 3px 3px 20px rgb(80, 80, 80);
     background-color: #357451;
     border-radius: 10px;
 

@@ -10,6 +10,7 @@
             width: 100%;
             height: 100%;
             border: 2px solid $green-color;
+            border-radius: 5px;
             background-color: $side-color;
             padding-left: 1vw;
         }
@@ -19,6 +20,8 @@
         list-style: none;
         max-height: 60vh;
         overflow: auto;
+        background-color: $green-color;
+        padding: 0 5px;
         li {
             button {
                 width: 100%;
@@ -26,11 +29,16 @@
                 margin-top: .5vh;
                 padding: 2px 4px;
                 font-size: 13px;
-                background-color: $yellow-color;
+                box-shadow: 1px 1px 2px $darkgreen-color, -1px -1px 2px $darkgreen-color;
+                border: 1px solid $darkgreen-color;
+                border-radius: 5px;
+                color: $side-color;
                 transition: .2s;
+                &:last-of-type {
+                    margin-bottom: .5vh;
+                }
                 &:hover {
-                    background-color: $green-color;
-                    color: $side-color;
+                    background-color: $darkgreen-color;
                 }
             }
         }
@@ -42,10 +50,11 @@
 @media only screen and (min-width: 700px) and (orientation: portrait) {
     .page-body {
         .search-form input {
-            // font-size: 15px;
+            font-size: 15px;
+            border-radius: 10px;
         }
         .suggestions li button{
-            // font-size: 15px;
+            font-size: 15px;
         }
     }
 }
@@ -56,13 +65,14 @@
             width: 35vw;
             max-width: 350px;
             input {
-            // font-size: 15px;
-        }
+            font-size: 15px;
+            }
         }
         
         .suggestions li button{
-            // font-size: 15px;
+            font-size: 15px;
             padding: 4px;
         }
     }
 }
+

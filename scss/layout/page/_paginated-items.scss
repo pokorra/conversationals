@@ -1,0 +1,115 @@
+.paginated-items {
+    position: relative;
+    height: 70vh;
+    width: 100vw;
+    top: 10vh;
+    @include centerflex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+.list-container {
+    border-top:  2px solid $darkgreen-color;
+    border-bottom:  2px solid $darkgreen-color;
+    list-style: none;
+    padding: 0 20vw;
+    box-shadow: 0 5px 12px $grey-color, 0 -5px 12px $grey-color;
+    li {
+        margin: 5px 0px;
+        button {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            padding: 5px;
+            transition: .2s;
+            font-weight: bold;
+            box-shadow: 1px 1px 4px $grey-color;
+            &:hover {
+                @include highlight;
+            }
+        }
+    }
+}
+
+.page-numbers {
+    margin: 2vh auto;
+    width: 80vw;
+    height: auto;
+    padding: 0 20vw;
+    
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    transition: .1s;
+
+    background-color: $darkgreen-color;
+    border-radius: 10px;
+    box-shadow: 5px 0 10px $grey-color, -5px 0 10px $grey-color;
+    button {
+        padding: 2px 8px;
+        margin: 5px;
+        font-weight: bold;
+        border-radius: 5px;
+        color: $side-color;
+        box-shadow: 3px 3px 7px $darkergreen-color;
+        &:hover {
+            background-color: $green-color;
+            color: $font-color;
+        }
+    }
+    .active {
+        background-color: $side-color;
+        color: $font-color;
+    }
+}
+
+
+
+@media only screen and (min-width: 700px) and (orientation: portrait) {
+    .paginated-items {
+        height: 65vh;
+        top: 15vh;
+    }
+    .list-container {
+        height: 40vh;
+        padding: 1vh 30vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .list-container li button {
+        padding: 8px;
+        box-shadow: 4px 4px 10px $grey-color;
+    }
+    .page-numbers {
+        width: 55vw;
+        padding: 2vh 15vw;
+        button {
+            padding: 5px 10px;
+            box-shadow: 4px 4px 10px #006978;
+        }
+    }
+}
+
+@media only screen and (min-width: 700px) and (orientation: landscape) {
+    .list-container {
+        width: 60vw;
+        margin: 0 30vw 0 10vw;
+        padding: 3vh 20vw 3vh 10vw;
+        box-shadow: none;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border-right: 40vw solid $darkgreen-color;
+            border-top: 25vh solid transparent;
+            z-index: -1
+        }
+    }
+    .page-numbers {
+        width: 40vw;
+        padding: 1vh;
+    }
+}

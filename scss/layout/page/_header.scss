@@ -59,7 +59,7 @@ nav {
             }
         }
     }
-    #nav-list {
+    .nav-list {
         list-style: none;
         position: absolute;
         width: 40vw;
@@ -75,7 +75,8 @@ nav {
     .rolled-up {
         transform: translateY(-100%);
     }
-    .nav-list {
+    
+    .rolled-down {
         transform: translateY(0%);
         box-shadow: 5px 5px 15px rgb(128, 128, 128), 3px 3px 20px rgb(80, 80, 80);
         li {
@@ -102,14 +103,25 @@ nav {
     to {transform: rotate(360deg);}
 }
 
+
 @media only screen and (min-width: 700px) and (orientation: portrait) {
-    .page-body nav #nav-list {
+    .page-body nav .nav-list {
         width: 25vw;
     }
+
 }
 
 @media only screen and (min-width: 700px) and (orientation: landscape) {
-    .page-body nav #nav-list {
+    .page-body {
+        &::after {
+            content: '';
+            position: absolute;
+        }
+        .page-name h1 {
+            letter-spacing: 5px;
+        }
+        nav .nav-list {
         width: 20vw;
     }
+}
 }

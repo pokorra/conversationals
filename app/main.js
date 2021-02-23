@@ -18,7 +18,7 @@ let itemsPerPage = 8;
 //rozwijanie menu
 menuBtn.addEventListener('click', ()=> {
     navList.classList.contains('rolled-up') ?
-    navList.classList.replace('rolled-up', 'nav-list') : navList.classList.replace('nav-list', 'rolled-up');
+    navList.classList.replace('rolled-up', 'rolled-down') : navList.classList.replace('rolled-down', 'rolled-up');
 })
 
 

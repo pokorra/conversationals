@@ -3,3 +3,21 @@
 h2 {
     font-family: 'Bodoni Moda', serif;
 }
+
+.page-body {
+    overflow: hidden;
+}
+
+
+@media only screen and (min-width: 700px) and (orientation: landscape) {
+    .page-body::after {
+        content: '';
+        position: absolute;
+        bottom: 0vh;
+        right: 10vw;
+        border-left: 35vw solid $green-color;
+        border-bottom: 70vh solid transparent;
+        transform: rotate(15deg);
+        z-index: -2;
+    }
+}

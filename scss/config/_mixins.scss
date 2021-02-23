@@ -4,3 +4,9 @@
     align-items: center;
     justify-content: center;
 }
+
+@mixin highlight {
+    background-color: $darkgreen-color;
+    color: $side-color;
+    box-shadow: 3px 3px 7px $darkergreen-color;
+}
