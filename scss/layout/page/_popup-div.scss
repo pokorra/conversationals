@@ -1,89 +1,115 @@
 .popup-div {
     position: absolute;
-    width: 70vw;
+    width: 90vw;
     height: 70vh;
     top: 0;
+    margin: 15vh 5vw;
     z-index: 3;
 
-    margin: 15vh 15vw;
-    color: $grey-color;
-    box-shadow: 5px 5px 15px $grey-color, 3px 3px 20px rgb(80, 80, 80);
-    background-color: #357451;
     border-radius: 10px;
-
-    background: radial-gradient(circle, $green-color 0%, $darkgreen-color 80%);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    
+    box-shadow: 5px 5px 15px $grey-color, 3px 3px 20px rgb(80, 80, 80);
+    background-color: $darkergreen-color;
+    // background: radial-gradient(circle, $green-color 0%, $darkgreen-color 80%);
+    @include centerflex;
+    overflow: hidden;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 30vw;
+        height: 55vh;
+        background-color: $darkgreen-color;
+        top: 0;
+        right: 0;
+        transform: rotate(-35deg);
+        transform-origin: top left;
+        z-index: -1;
+    }
     h2, li, p {
-        color: rgb(224, 224, 224);
+        color: $side-color;
     }
     h2 {
-        font-size: 2rem;
-        padding: 2vw;
+        font-size: 2.5rem;
+        padding: 3vh 2vw;
     }
 }
 
 .alg-list {
     list-style: none;
-
     li {
-        padding: .5vw;
-        margin: .5vw;
+        padding: 1vw;
+        padding-left: 2.5vw;
+        margin: 1.5vh auto;
+        width: 90%;
+
         display: flex;
         flex-direction: column;
-        width: 50vw;
         font-size: 1.2em;
         line-height: 1.6rem;
 
-        border: 1px dotted seagreen;
-
+        border-radius: 10px;
+        box-shadow: 1px 1px 3px $side-color;
         .btn-link {
+            position: relative;
             width: auto;
-            max-width: 30%;
+            max-width: 50%;
             align-self: end;
             border-radius: 5px;
+            color: $side-color;
+            padding: 2px 4px;
+            font-weight: bold;
+            &::before {
+                content: '>';
+                position: absolute;
+                font-size: 30px;
+                font-style:initial;
+                left: -5vw;
+                top: -10px;
+                color: $red-color;
+            }
         }
     }
 }
 
 .close-div {
-    width: 40px;
-    height: 40px;
-    background-color: rgb(255, 0, 0);
+    width: 32px;
+    height: 32px;
     position: absolute;
     top: 2vh;
     right: 2vw;
-    border-radius: 50%;
+    background-color: transparent;
     &:hover {
-        background-color: rgba(255, 0, 0, .8);
-        transform: scale(1.05);
+        transform: scale(1.15);
+        background-color: transparent;
     }
-    span {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        display: inline-block;
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 4vw;
+        width: 5px;
+        height: 33px;
+        background-color: $red-color;
     }
-    // span::before {
-    //     content: '';
-    //     background-color: white;
-    //     position: absolute;
-    // }
-    // span::after {
-    //     content: '';
-    //     background-color: white;
-    //     position: absolute;
+    &::before {
+        transform: rotate(45deg);
+    }
+    &::after {
+        transform: rotate(-45deg);
+    }
+   
+}
 
-    //     width: 100%;
-    //     height: 5px;
-    //     right: 0;
-    //     transform: rotate(-45deg);
-    //     transform-origin: center right;
+@media only screen and (min-width: 700px) and (orientation: portrait) {
+    .popup-div {
 
-    // }
+    }
+    .alg-list li .btn-link::before {
+        left: -3vw;
+    }
+}
+
+@media only screen and (min-width: 700px) and (orientation: landscape) {
+    .popup-div {
+
+    }
 }
