@@ -95,9 +95,11 @@ window.showItem = (item) => {
     closingBtn.classList.add('close-div');
     closingBtn.onclick = ()=> closePopup();
     window.onclick = function(event) {
-        if (event.target === html) {
-            closePopup();
-        }
+        console.log(event.target)
+        // if (event.target.className ==! "popup-div") {
+        //     closePopup();
+        //     console.log('tu')
+        // }
     }
     append(bigDiv, closingBtn);
 
@@ -127,7 +129,8 @@ window.showItem = (item) => {
 
     if (item.link) {
         const itemLink = createNew('button');
-        itemLink.classList.add('item-link');
+        itemLink.classList.add('btn-link', 'item-link');
+        // itemLink.classList.add('item-link');
         itemLink.innerHTML = `Zobacz też: ${item.link}`;
         itemLink.addEventListener('click', ()=> {
             showLinkedItem(item.link);

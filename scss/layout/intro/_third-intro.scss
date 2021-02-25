@@ -32,6 +32,7 @@ article {
     z-index: 3;
     span {
         font-weight: bold;
+        font-size: inherit;
     }
 }    
 
@@ -51,6 +52,7 @@ article {
         background-color: $side-color;
         position: relative;
         overflow: hidden;
+        z-index: 3;
         &::after {
             content: '';
             position: absolute;

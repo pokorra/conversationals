@@ -10,6 +10,7 @@
         span {
             position: absolute;
             font-family: inherit;
+            font-size: inherit;
             width: 100vw;
         }
         span:first-of-type {
@@ -42,7 +43,7 @@
     .first-inner {
         flex-direction: row;
         h1 {
-            font-size: 3em;
+            font-size: 3.5em;
         }
     }
     .half-first, .half-second {

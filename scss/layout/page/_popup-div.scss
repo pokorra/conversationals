@@ -35,6 +35,7 @@
 
 .alg-list {
     list-style: none;
+    width: 90%;
     li {
         padding: 1vw;
         padding-left: 2.5vw;
@@ -48,28 +49,35 @@
 
         border-radius: 10px;
         box-shadow: 1px 1px 3px $side-color;
-        .btn-link {
-            position: relative;
-            width: auto;
-            max-width: 50%;
-            align-self: end;
-            border-radius: 5px;
-            color: $side-color;
-            padding: 2px 4px;
-            font-weight: bold;
-            &::before {
-                content: '>';
-                position: absolute;
-                font-size: 30px;
-                font-style:initial;
-                left: -5vw;
-                top: -10px;
-                color: $red-color;
-            }
-        }
+        
     }
 }
 
+.btn-link {
+    position: relative;
+    width: auto;
+    max-width: 50%;
+    align-self: end;
+    color: $side-color;
+    padding: 2px 4px;
+    font-weight: bold;
+    border-top: 1px solid $red-color;
+    margin-top: 1.5vh;
+    &::before {
+        content: '>';
+        position: absolute;
+        font-size: 30px;
+        font-style:initial;
+        left: -5vw;
+        top: -10px;
+        color: $red-color;
+    }
+}
+.item-link {
+    right: 10vw;
+    font-size: 120%;
+    margin-top: 4vh;
+}
 .close-div {
     width: 32px;
     height: 32px;
@@ -78,7 +86,7 @@
     right: 2vw;
     background-color: transparent;
     &:hover {
-        transform: scale(1.15);
+        transform: scale(1.25);
         background-color: transparent;
     }
     &::before, &::after {
@@ -96,20 +104,54 @@
     &::after {
         transform: rotate(-45deg);
     }
-   
 }
 
 @media only screen and (min-width: 700px) and (orientation: portrait) {
-    .popup-div {
-
+    .alg-list {
+        width: 80%;
     }
-    .alg-list li .btn-link::before {
+    .btn-link::before {
         left: -3vw;
+        top: -8px;
+    }
+    .item-link {
+        right: 15vw;
+        margin-top: 6vh;
+    }
+    .close-div::before, .close-div::after {
+        right: 2vw;
     }
 }
 
 @media only screen and (min-width: 700px) and (orientation: landscape) {
     .popup-div {
+        width: 70vw;
+        margin: 15vh 15vw;
+    }
+    .alg-list {
+        width: 60%;
+    }
+    .btn-link::before {
+        left: -1.5vw;
+    }
+    .item-link {
+        right: 15vw;
+        margin-top: 6vh;
+    }
+    .close-div::before, .close-div::after {
+        right: 1vw;
+    }
+    .close-div:hover {
+        animation: rotatinho .5s ease-in;
+    }
+}
 
+
+@keyframes rotatinho {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }

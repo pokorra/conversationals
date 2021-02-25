@@ -22,6 +22,7 @@
         overflow: auto;
         background-color: $green-color;
         padding: 0 5px;
+        box-shadow: 3px 3px 10px $grey-color, -3px -3px 1-px $grey-color;
         li {
             button {
                 width: 100%;

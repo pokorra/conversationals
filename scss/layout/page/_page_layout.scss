@@ -6,6 +6,13 @@ h2 {
 
 .page-body {
     overflow: hidden;
+    position: relative;
+}
+.page-body::before {
+    content: '';
+    position: absolute;
+    background-color: $red-color;
+    box-shadow: 3px 2px $grey-color;
 }
 
 
@@ -13,7 +20,7 @@ h2 {
     .page-body::after {
         content: '';
         position: absolute;
-        bottom: 0vh;
+        top: 30vh;
         right: 10vw;
         border-left: 35vw solid $green-color;
         border-bottom: 70vh solid transparent;
