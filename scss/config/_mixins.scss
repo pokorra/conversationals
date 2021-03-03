@@ -6,7 +6,13 @@
 }
 
 @mixin highlight {
-    background-color: $darkgreen-color;
+    background-color: $green-color;
     color: $side-color;
-    box-shadow: 3px 3px 7px $darkergreen-color;
+    box-shadow: 3px 3px 7px $font-color;
+}
+
+@mixin list-element {
+    width: 100%;
+    height: 100%;
+    
 }

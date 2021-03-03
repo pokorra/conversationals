@@ -1,6 +1,6 @@
 .paginated-items {
     position: relative;
-    height: 70vh;
+    height: auto;
     width: 100vw;
     top: 10vh;
     @include centerflex;
@@ -12,55 +12,66 @@
     border-top:  2px solid $darkgreen-color;
     border-bottom:  2px solid $darkgreen-color;
     list-style: none;
-    padding: 0 20vw;
-    box-shadow: 0 5px 12px $grey-color, 0 -5px 12px $grey-color;
+    padding: 1vh 25vw 1vh 10vw;
+    background: linear-gradient(15deg, #aba7cc, $side-color, #00b5f7);
+    // background-color: $side-color;
 
     li {
-        margin: 5px 0px;
+        margin: 1vh 0;
         button {
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-            padding: 5px;
-            transition: .2s;
+           @include list-element;
+           background-color: $side-color;
+        //    background: linear-gradient(15deg, #aba7cc, $side-color, #00b5f7);
+            padding: 10px 0 10px 15vw;
+            box-shadow: 3px 3px 2px $half-trans, -1px -1px 5px rgba(166, 26, 93, .3);
+            text-align: start;
+            font-size: 15px;
+            letter-spacing: .7px;
             font-weight: bold;
-            box-shadow: 1px 1px 4px $grey-color;
+            transition: .2s;
             &:hover {
-                @include highlight;
+                // @include highlight;
+                background-color: $green-color;
+                color: $side-color;
+                box-shadow: 3px 3px 7px $font-color;
             }
+
         }
     }
 }
 
 .page-numbers {
-    margin: 2vh auto;
+    margin: 2vh auto 1vh;
     width: 80vw;
     height: auto;
-    padding: 0 20vw;
+    padding: 1vh 15vw;
     
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     transition: .1s;
 
-    background-color: $darkgreen-color;
+    background-color: $green-color;
     border-radius: 10px;
-    box-shadow: 5px 0 10px $grey-color, -5px 0 10px $grey-color;
+    // box-shadow: 5px 0 10px $grey-color, -5px 0 10px $grey-color;
     button {
-        padding: 2px 8px;
+        padding: 3px 8px;
         margin: 5px;
         font-weight: bold;
         border-radius: 5px;
         color: $side-color;
-        box-shadow: 3px 3px 7px $darkergreen-color;
+        background-color: $darkgreen-color;
+        box-shadow: 2px 2px 6px $darkgreen-color;
         &:hover {
-            background-color: $green-color;
-            color: $font-color;
+            background-color: rgba(103, 0, 105, .6);
         }
     }
     .active {
         background-color: $side-color;
         color: $font-color;
+        &:hover {
+            background-color: rgba(245, 245, 245, 0.5);
+        }
     }
 }
 
@@ -68,42 +79,44 @@
 
 @media only screen and (min-width: 700px) and (orientation: portrait) {
     .paginated-items {
-        height: 65vh;
+        height: auto;
         top: 15vh;
     }
-    .list-container {
-        height: 40vh;
-        padding: 1vh 30vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-
-    }
     .list-container li button {
-        padding: 8px;
-        box-shadow: 4px 4px 10px $grey-color;
+        font-size: 17px;
+        padding: 13px 0 13px 10vw;
+        box-shadow: 5px 5px 3px $half-trans,
+                    -1px -1px 5px rgba(166, 26, 93, .3);
     }
     .page-numbers {
-        width: 55vw;
+        width: 60vw;
+        margin: 4vh auto 1vh;
         padding: 2vh 15vw;
+
         button {
-            padding: 5px 10px;
-            box-shadow: 4px 4px 10px #006978;
+            margin: .7vh;
+            font-size: 17px;
+            padding: 8px 12px;
+            box-shadow: 4px 4px 10px $darkgreen-color;
         }
     }
 }
 
 @media only screen and (min-width: 700px) and (orientation: landscape) {
+    .paginated-items {
+        height: 80vh;
+    }
     .list-container {
         width: 60vw;
         margin: 0 30vw 0 10vw;
-        padding: 3vh 20vw 3vh 10vw;
-        box-shadow: none;
+        padding: 5vh 10vw 0;
         position: relative;
         border-top: none;
         border-bottom: none;
+
+        background: $side-color;
         &::after {
-            content: '';
+            // content: '';
             position: absolute;
             bottom: 0;
             right: 0;
@@ -111,10 +124,22 @@
             border-top: 25vh solid transparent;
             z-index: -1
         }
+        li {
+            button {
+                padding-left: 10vw;
+                font-size: 2vh;
+            }
+        }
     }
     .page-numbers {
         width: 45vw;
-        padding: 1vh;
+        padding: 2vh 5vw;
+        button {
+            margin: .7vh 1vw;
+            font-size: 2.5vh;
+            padding: 1vh 1.8vh;
+            box-shadow: 4px 4px 10px $darkgreen-color;
+        }
     }
 }
 

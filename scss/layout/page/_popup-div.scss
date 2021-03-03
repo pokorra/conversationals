@@ -143,6 +143,7 @@
     }
     .close-div:hover {
         animation: rotatinho .5s ease-in;
+        transform-origin: center;
     }
 }
 

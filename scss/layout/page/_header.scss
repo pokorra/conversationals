@@ -54,9 +54,7 @@ nav {
         z-index: 5;
         &:hover {
             animation: roll .7s linear infinite;
-            #spiral {
-                fill: $side-color;
-            }
+            
         }
     }
     .nav-list {
