@@ -1,29 +1,23 @@
 .popup-div {
     position: absolute;
     width: 90vw;
-    height: 70vh;
+    min-height: 75vh;
     top: 0;
     margin: 15vh 5vw;
-    z-index: 3;
-
+    z-index: 6;
     border-radius: 10px;
-    box-shadow: 5px 5px 15px $grey-color, 3px 3px 20px rgb(80, 80, 80);
+    // box-shadow: 5px 5px 15px $grey-color, 
+    //             3px 3px 20px rgb(80, 80, 80),
+    //             20vw 10vh 10px rgba(211, 211, 211, 1),
+    //             -20vw -20vh 10px rgba(211, 211, 211, 1),
+    //             20vw -20vh 10px rgba(211, 211, 211, 1),
+    //             -20vw 10vh 10px rgba(211, 211, 211, 1);
     background-color: $darkergreen-color;
-    // background: radial-gradient(circle, $green-color 0%, $darkgreen-color 80%);
+    background: radial-gradient(circle, $green-color 0%, $darkgreen-color 80%);
     @include centerflex;
-    overflow: hidden;
-    &::after {
-        content: '';
-        position: absolute;
-        width: 30vw;
-        height: 55vh;
-        background-color: $darkgreen-color;
-        top: 0;
-        right: 0;
-        transform: rotate(-35deg);
-        transform-origin: top left;
-        z-index: -1;
-    }
+
+    transform: scale(0);
+    animation: show-pop .2s linear forwards;
     h2, li, p {
         color: $side-color;
     }
@@ -151,8 +145,22 @@
 @keyframes rotatinho {
     from {
         transform: rotate(0deg);
+        
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes show-pop {
+    from {transform: scale(0) rotate(180deg);}
+    to {
+        transform: scale(1) rotate(0deg);
+        box-shadow: 5px 5px 15px $grey-color, 
+                3px 3px 20px rgb(80, 80, 80),
+                20vw 10vh 10px rgba(211, 211, 211, 1),
+                -20vw -20vh 10px rgba(211, 211, 211, 1),
+                20vw -20vh 10px rgba(211, 211, 211, 1),
+                -20vw 10vh 10px rgba(211, 211, 211, 1);;
     }
 }

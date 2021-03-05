@@ -2,10 +2,10 @@
  
 header {
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: $green-color;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    background-color: $darkgreen-color;
     height: 9vh;
     overflow: hidden;
     z-index: 3;
@@ -14,7 +14,7 @@ header {
     padding: 1vh 2vh;
     width: 35vw;
     height: 9vh;
-    background-color: $darkgreen-color;
+    background-color: $red-color;
     position: relative;
     
     &::after {
@@ -23,8 +23,8 @@ header {
         width: 0vw;
         top: 0;
         left: 35vw;
-        border-bottom: 9.1vh solid $darkgreen-color;
-        border-right: 10vw solid $green-color;
+        border-bottom: 9.1vh solid $red-color;
+        border-right: 10vw solid $darkgreen-color;
         transition: .6s ease-in-out;
     }
     h1 {
@@ -54,7 +54,6 @@ nav {
         z-index: 5;
         &:hover {
             animation: roll .7s linear infinite;
-            
         }
     }
     .nav-list {
@@ -76,7 +75,7 @@ nav {
     
     .rolled-down {
         transform: translateY(0%);
-        box-shadow: 5px 5px 15px rgb(128, 128, 128), 3px 3px 20px rgb(80, 80, 80);
+        box-shadow: 3px 3px 20px rgb(80, 80, 80);
         li {
             padding: 1vh 0;
             background-color: $green-color;

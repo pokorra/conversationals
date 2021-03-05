@@ -9,59 +9,51 @@
 }
 
 .list-container {
-    border-top:  2px solid $darkgreen-color;
-    border-bottom:  2px solid $darkgreen-color;
     list-style: none;
     padding: 1vh 25vw 1vh 10vw;
-    background: linear-gradient(15deg, #aba7cc, $side-color, #00b5f7);
-    // background-color: $side-color;
 
     li {
         margin: 1vh 0;
         button {
            @include list-element;
            background-color: $side-color;
-        //    background: linear-gradient(15deg, #aba7cc, $side-color, #00b5f7);
+           border-radius: 15px;
             padding: 10px 0 10px 15vw;
-            box-shadow: 3px 3px 2px $half-trans, -1px -1px 5px rgba(166, 26, 93, .3);
             text-align: start;
             font-size: 15px;
             letter-spacing: .7px;
             font-weight: bold;
             transition: .2s;
             &:hover {
-                // @include highlight;
                 background-color: $green-color;
                 color: $side-color;
                 box-shadow: 3px 3px 7px $font-color;
             }
-
         }
     }
 }
 
 .page-numbers {
     margin: 2vh auto 1vh;
-    width: 80vw;
+    width: 70vw;
     height: auto;
-    padding: 1vh 15vw;
-    
+    padding: 1vh 10vw;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     transition: .1s;
 
-    background-color: $green-color;
+    background-color: $red-color;
     border-radius: 10px;
-    // box-shadow: 5px 0 10px $grey-color, -5px 0 10px $grey-color;
+    box-shadow: 3px 3px 10px $font-color;
     button {
         padding: 3px 8px;
         margin: 5px;
         font-weight: bold;
         border-radius: 5px;
         color: $side-color;
-        background-color: $darkgreen-color;
-        box-shadow: 2px 2px 6px $darkgreen-color;
+        background-color: $red-color;
+        box-shadow: 2px 2px 6px $font-color;
         &:hover {
             background-color: rgba(103, 0, 105, .6);
         }
@@ -76,7 +68,6 @@
 }
 
 
-
 @media only screen and (min-width: 700px) and (orientation: portrait) {
     .paginated-items {
         height: auto;
@@ -85,19 +76,17 @@
     .list-container li button {
         font-size: 17px;
         padding: 13px 0 13px 10vw;
-        box-shadow: 5px 5px 3px $half-trans,
-                    -1px -1px 5px rgba(166, 26, 93, .3);
     }
     .page-numbers {
-        width: 60vw;
+        width: 50vw;
         margin: 4vh auto 1vh;
-        padding: 2vh 15vw;
+        padding: 2vh 10vw;
 
         button {
             margin: .7vh;
             font-size: 17px;
             padding: 8px 12px;
-            box-shadow: 4px 4px 10px $darkgreen-color;
+            box-shadow: 4px 4px 10px $font-color;
         }
     }
 }
@@ -113,21 +102,27 @@
         position: relative;
         border-top: none;
         border-bottom: none;
-
-        background: $side-color;
-        &::after {
-            // content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            border-right: 40vw solid $darkgreen-color;
-            border-top: 25vh solid transparent;
-            z-index: -1
-        }
         li {
             button {
+                position: relative;
                 padding-left: 10vw;
                 font-size: 2vh;
+                overflow: hidden;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 20%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: $darkgreen-color;
+                    transform: skew(45deg) translateX(-10vw);
+                }
+            }
+            button:hover {
+                &::after {
+                    animation: move-skew .3s 2 linear;
+                }
             }
         }
     }
@@ -138,13 +133,38 @@
             margin: .7vh 1vw;
             font-size: 2.5vh;
             padding: 1vh 1.8vh;
-            box-shadow: 4px 4px 10px $darkgreen-color;
+            box-shadow: 4px 4px 10px $font-color;
         }
     }
 }
 
 @media only screen and (min-width: 1250px) and (orientation: landscape) {
+    .paginated-items {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
     .page-numbers {
         width: 40vw;
+        border-radius: 20px;
+        padding: 1.5vh 3vw;
+        button {
+            padding: .5vh 1.2vh;
+        }
     }
+}
+
+@media only screen and (min-height: 800px) and (orientation: landscape) {
+    .page-numbers {
+        width: 35vw;
+        border-radius: 20px;
+        button {
+        font-size: 2vh;
+        padding: .7vh 1.4vh;
+        }
+    }
+}
+
+@keyframes move-skew {
+    from { transform: skew(45deg) translateX(-10vw);}
+    to {transform: skew(45deg) translateX(45vw);}
 }

@@ -2,4 +2,88 @@
     position: relative;
     height: 100vh;
     @include centerflex;
+    justify-content: flex-start;
+    width: 100vw;
+    padding: 2vh 5vw ;
+    background: linear-gradient($darkgreen-color 0%, $green-color 75%, $side-color 95%);
+}
+
+.about__btn {
+    text-transform: capitalize;
+    padding: 1vh 0;
+    margin: 1vh 0;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 17px;
+    font-weight: bold;    
+    border-radius: 15px;
+    width: 90vw;
+
+}
+.collapse {
+    background-color: $side-color;
+}
+.about__desc {
+    color: white;
+    padding-left: 2vw;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s linear;
+}
+.about-active, .collapse:hover {
+    @include active-about;
+}
+
+.about__link-back {
+    position: fixed;
+    bottom: 3vh;
+}
+.cta--back {
+    background-color: $red-color;
+    color: $side-color;
+    margin: 0 auto;
+    &:hover {
+        background-color: $red-color;
+    }
+}
+
+@media only screen and (min-width: 700px) and (orientation: portrait) {
+    .about {
+        padding: 10vh 15vw;
+    }
+    .about__btn {
+        width: 90%;
+    }
+    .about__link-back {
+        width: 70vw;
+        bottom: 10vh;
+    }
+    .about__desc {
+        width: 70%;
+        font-size: 17px;
+    }
+}
+
+@media only screen and (min-width: 700px) and (orientation: landscape) {
+    .about {
+        padding: 5vh 40vw 5vh 5vw;
+    }
+
+    .about__btn {
+        width: 90%;
+        border-radius: 20px;
+    }
+    .about__link-back {
+        width: 40vw;
+        max-width: 550px;
+        bottom: 10vh;
+        right: 10vw;
+    }
+
+    .about__desc {
+        width: 120%;
+        max-width: 700px;
+        font-size: 17px;
+        margin-bottom: 1vh;
+    }
 }

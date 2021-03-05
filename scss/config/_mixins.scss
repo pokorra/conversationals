@@ -14,5 +14,9 @@
 @mixin list-element {
     width: 100%;
     height: 100%;
-    
+}
+
+@mixin active-about {
+    background-color: $red-color;
+    color: $side-color;
 }
