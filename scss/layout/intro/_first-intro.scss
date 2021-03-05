@@ -7,26 +7,33 @@
         text-transform: uppercase;
         text-align: center;
         opacity: 0;
+        z-index: 3;
+        
         span {
             position: absolute;
             font-family: inherit;
             font-size: inherit;
             width: 100vw;
+            color: $side-color;
         }
         span:first-of-type {
             top: 30vh;
+            // opacity: 0;
         }
         span:last-of-type {
             top: 60vh;
+            // opacity: 0;
         }
     }
 }
 .half-first {
-    width: 100%;
+    // width: 100%;
+    opacity: 0;
     background-color: $darkgreen-color;
 }
 .half-second {
-    width: 100%;
+    // width: 100%;
+    opacity: 0;
     background-color: $green-color;
 }
 
