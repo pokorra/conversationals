@@ -1,48 +1,75 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-const api = "http://localhost:3000/base";
-const base = [];
-const list = document.querySelector('.list-container');
-const paginationBox = document.querySelector('.page-numbers');
-const body = document.querySelector('body');
-const html = document.querySelector('html');
-const menuBtn = document.querySelector('.menu-btn');
-const navList = document.querySelector('#nav-list');
-//searching variables:
-const searchInput = document.querySelector('.search');
-const suggestions = document.querySelector('.suggestions');
-//pagination variables:
-let currentPage = 1;
-let itemsPerPage = 8;
+    const base = [];
+    const list = document.querySelector('.list-container');
+    const paginationBox = document.querySelector('.page-numbers');
+    const body = document.querySelector('body');
+    const html = document.querySelector('html');
+    const menuBtn = document.querySelector('.menu-btn');
+    const navList = document.querySelector('#nav-list');
+    //searching variables:
+    const searchInput = document.querySelector('.search');
+    const suggestions = document.querySelector('.suggestions');
+    //pagination variables:
+    let currentPage = 1;
+    let itemsPerPage = 8;
 
-//rozwijanie menu
-menuBtn.addEventListener('click', ()=> {
-    navList.classList.contains('rolled-up') ?
-    navList.classList.replace('rolled-up', 'rolled-down') : navList.classList.replace('rolled-down', 'rolled-up');
-})
+    function createNew(el){
+        return document.createElement(el);
+        }
+    function append(parent, el){
+        return parent.appendChild(el);  
+        }
+        //expanding spiral menu
+    menuBtn.addEventListener('click', ()=> {
+        navList.classList.contains('rolled-up') ?
+        navList.classList.replace('rolled-up', 'rolled-down') : navList.classList.replace('rolled-down', 'rolled-up');
+    })
 
-
-function createNew(el){
-    return document.createElement(el);
-}
-function append(parent, el){
-    return parent.appendChild(el);
-}
-//otwieranie powiązanych haseł
+//opening linked items
 const showLinkedItem = (itemName) => {
     const newItem = base.find( ({name}) => name === itemName);
     showItem(newItem);
 }
-//co z hasłami dwuwyrazowymi?
+//unsolved issue with two-word items
 window.showItemFromList = (itemName) => {
-    console.log(itemName);
     const newItem = base.find( ({name}) => name === itemName);
     showItem(newItem);
     searchInput.value = '';
     suggestions.innerHTML = '';
 }
+//clearing input on clicking not on input and hiding spiral menu on clicking not on it
+document.addEventListener('click', function(e){
+    if (!e.target.classList.contains('search')) {
+        searchInput.value = '';
+        suggestions.innerHTML = '';
+    }
+    if (!e.target.classList.contains('spiral-icon') && navList.classList.contains('rolled-down')){
+        navList.classList.replace('rolled-down', 'rolled-up') ;
+    }
+})
 
-//zamykanie popupu
+//searching through the input
+function findPlaces(wordToFind, base){
+    return base.filter(baseItem => {
+        const regex = new RegExp(wordToFind, 'gi');
+        return baseItem.name.match(regex);
+    })
+}
+
+function displayNamesInput(){
+    const matchInBase = findPlaces(this.value, base);
+    const list = matchInBase.map(match => {
+        if(this.value === '') {return;}
+        // const stringified = JSON.stringify(match.name);
+        return ` <li class='list-from-form'> 
+                    <button  onclick=showItemFromList('${match.name}')> ${match.name} </button> 
+                </li>`;
+    }).join('');  
+    suggestions.innerHTML = list;
+}
+
+//closing modal
 const closePopup = () => {
     const openDivs = document.querySelectorAll('.popup-div');
     openDivs.forEach(eachDiv => {
@@ -50,9 +77,11 @@ const closePopup = () => {
     })
 }
 
-//DUŻE FUNKCJE:
+//bigger functions
 //fetching data from api
+const api = "https://api.npoint.io/e26132b4e5bfd46cdb19/base/"
 function getBase(){
+
     fetch(api)
     .then(res => res.json())
     .then(data => {
@@ -65,6 +94,7 @@ function getBase(){
     })
 };
 
+//displaying list
 function DisplayList(items, wrapper, itemsPerPage, pageNumber) {
     wrapper.innerHTML = '';
     pageNumber--;
@@ -84,6 +114,7 @@ function DisplayList(items, wrapper, itemsPerPage, pageNumber) {
     }
 };
 
+//displaying modal with an entry data
 window.showItem = (item) => {
     const newdiv = ` <div class="new-div">                     
                         <h2> ${item.name} </h2>    
@@ -94,12 +125,9 @@ window.showItem = (item) => {
     const closingBtn = createNew('button');
     closingBtn.classList.add('close-div');
     closingBtn.onclick = ()=> closePopup();
-    window.onclick = function(event) {
-        console.log(event.target)
-    }
     append(bigDiv, closingBtn);
 
-    //lista algorytmów
+    //conversationals list
     const ul = createNew('ul');
     ul.classList.add('alg-list');
     if (item.info) {
@@ -107,7 +135,7 @@ window.showItem = (item) => {
             const li = createNew('li');
             li.innerHTML = single.innerinfo;
             if (single.innerlink) {
-                //tutaj odnośnik do haseł powiązanych
+                //link to related entries
                 single.innerlink.map(singlelink=> {
                     const btnlink = createNew('button');
                     btnlink.classList.add('btn-link');
@@ -126,7 +154,6 @@ window.showItem = (item) => {
     if (item.link) {
         const itemLink = createNew('button');
         itemLink.classList.add('btn-link', 'item-link');
-        // itemLink.classList.add('item-link');
         itemLink.innerHTML = `Zobacz: ${item.link}`;
         itemLink.addEventListener('click', ()=> {
             showLinkedItem(item.link);
@@ -158,24 +185,6 @@ function PaginationButton(page, items){
     return button;
 }
 
-function findPlaces(wordToFind, base){
-    return base.filter(baseItem => {
-        const regex = new RegExp(wordToFind, 'gi');
-        return baseItem.name.match(regex);
-    })
-}
-
-function displayNamesInput(){
-    const matchInBase = findPlaces(this.value, base);
-    const list = matchInBase.map(match => {
-        if(this.value === '') {return;}
-        const stringified = JSON.stringify(match.name);
-        return ` <li class='list-from-form'> 
-                    <button  onclick=showItemFromList('${match.name}')> ${match.name} </button> 
-                </li>`;
-    }).join('');  
-    suggestions.innerHTML = list;
-}
 
 getBase();
 
