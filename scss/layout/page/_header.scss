@@ -1,17 +1,17 @@
-.page-body {
+.page__body {
  
-header {
+.page__header {
     position: relative;
-    background-color: $darkgreen-color;
+    background-color: $darker-main-color;
     height: 9vh;
     overflow: hidden;
     z-index: 3;
 }
-.page-name {
+.page__title {
     padding: 1vh 2vh;
     width: 35vw;
     height: 9vh;
-    background-color: $red-color;
+    background-color: $contrast-color;
     position: relative;
     
     &::after {
@@ -20,107 +20,34 @@ header {
         width: 0vw;
         top: -0.05vh;
         left: 35vw;
-        border-bottom: 9.1vh solid $red-color;
-        border-right: 10vw solid $darkgreen-color;
+        border-bottom: 9.1vh solid $contrast-color;
+        border-right: 10vw solid $darker-main-color;
         transition: .6s ease-in-out;
     }
     h1 {
         font-size: 6vh;
-        color: $side-color;
+        color: $background-color;
         position: relative;
         z-index: 3;
         top: -8px;
     }
 }
-.page-name:hover{
+.page__title:hover{
     &::after {
         right: -50vw;
         width: 70vw;
     }
 }
-
-nav {
-    padding: 2vh;
-    position: absolute;
-    right: 0;
-    top: 0;
-    svg {
-        width: 5vh;
-        height: 5vh;
-        position: relative;
-        z-index: 5;
-        &:hover {
-            animation: roll .7s linear infinite;
-        }
-    }
-    .nav-list {
-        list-style: none;
-        position: absolute;
-        width: 40vw;
-        right: 2px;
-        top: 9vh;
-        
-        border-radius: 0 0 10px 10px;
-        background-color: $side-color;
-        text-align: center;
-        z-index: 2;
-        transition: .4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    }
-    .rolled-up {
-        transform: translateY(-100%);
-    }
-    
-    .rolled-down {
-        transform: translateY(0%);
-        box-shadow: 3px 3px 20px rgb(80, 80, 80);
-        li {
-            padding: 1vh 0;
-            background-color: $green-color;
-            color: $side-color;
-            border-top: 2px solid $font-color;
-            text-transform: capitalize;
-            cursor: pointer;
-            &:last-of-type {
-                border-radius: 0 0 10px 10px;
-            }
-            &:hover {
-                background-color: $darkgreen-color;
-            }
-            a {
-                display: inline-block;
-                width: 100%;
-                height: 100%;
-            }
-        }
-    }
-}
-}
-
-
-@keyframes roll {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
-}
-
-
-@media only screen and (min-width: 700px) and (orientation: portrait) {
-    .page-body nav .nav-list {
-        width: 25vw;
-    }
-
 }
 
 @media only screen and (min-width: 700px) and (orientation: landscape) {
-    .page-body {
+    .page__body {
         &::after {
             content: '';
             position: absolute;
         }
-        .page-name h1 {
+        .page__title h1 {
             letter-spacing: 5px;
         }
-        nav .nav-list {
-        width: 20vw;
     }
-}
 }

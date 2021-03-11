@@ -1,6 +1,6 @@
-.first-inner {
+.intro__inner--first {
     flex-direction: column;
-    background-color: $red-color;
+    background-color: $contrast-color;
     h1 {
         position: absolute;
         font-size: 2em;
@@ -8,33 +8,28 @@
         text-align: center;
         opacity: 0;
         z-index: 3;
-        
         span {
             position: absolute;
             font-family: inherit;
             font-size: inherit;
             width: 100vw;
-            color: $side-color;
+            color: $background-color;
         }
         span:first-of-type {
             top: 30vh;
-            // opacity: 0;
         }
         span:last-of-type {
             top: 60vh;
-            // opacity: 0;
         }
     }
 }
 .half-first {
-    // width: 100%;
     opacity: 0;
-    background-color: $darkgreen-color;
+    background-color: $darker-main-color;
 }
 .half-second {
-    // width: 100%;
     opacity: 0;
-    background-color: $green-color;
+    background-color: $main-color;
 }
 
 

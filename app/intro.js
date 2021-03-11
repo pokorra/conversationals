@@ -1,5 +1,5 @@
-const firstSection = document.querySelector('.first-inner');
-const secondSection = document.querySelector('.second-inner');
+const firstSection = document.querySelector('.intro__inner--first');
+const secondSection = document.querySelector('.intro__inner--second');
 
 const halfFirst = document.querySelector('.half-first');
 const halfSecond = document.querySelector('.half-second');

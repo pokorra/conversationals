@@ -6,20 +6,14 @@
     margin: 15vh 5vw;
     z-index: 6;
     border-radius: 10px;
-    // box-shadow: 5px 5px 15px $grey-color, 
-    //             3px 3px 20px rgb(80, 80, 80),
-    //             20vw 10vh 10px rgba(211, 211, 211, 1),
-    //             -20vw -20vh 10px rgba(211, 211, 211, 1),
-    //             20vw -20vh 10px rgba(211, 211, 211, 1),
-    //             -20vw 10vh 10px rgba(211, 211, 211, 1);
-    background-color: $darkergreen-color;
-    background: radial-gradient(circle, $green-color 0%, $darkgreen-color 80%);
+    background-color: $darker-main-color;
+    background: radial-gradient(circle, $main-color 0%, $darker-main-color 80%);
     @include centerflex;
 
     transform: scale(0);
     animation: show-pop .2s linear forwards;
     h2, li, p {
-        color: $side-color;
+        color: $background-color;
     }
     h2 {
         font-size: 2.5rem;
@@ -42,8 +36,7 @@
         line-height: 1.6rem;
 
         border-radius: 10px;
-        box-shadow: 1px 1px 3px $side-color;
-        
+        box-shadow: 1px 1px 3px $background-color; 
     }
 }
 
@@ -52,10 +45,10 @@
     width: auto;
     max-width: 50%;
     align-self: flex-end;
-    color: $side-color;
+    color: $background-color;
     padding: 2px 4px;
     font-weight: bold;
-    border-top: 1px solid $red-color;
+    border-top: 1px solid $contrast-color;
     margin-top: 1.5vh;
     &::before {
         content: '>';
@@ -64,7 +57,7 @@
         font-style:initial;
         left: -5vw;
         top: -10px;
-        color: $red-color;
+        color: $contrast-color;
     }
 }
 .item-link {
@@ -90,7 +83,7 @@
         right: 4vw;
         width: 5px;
         height: 33px;
-        background-color: $red-color;
+        background-color: $contrast-color;
     }
     &::before {
         transform: rotate(45deg);

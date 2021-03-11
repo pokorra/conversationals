@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuBtn = document.querySelector('.menu-btn');
     const navList = document.querySelector('#nav-list');
     //searching variables:
-    const searchInput = document.querySelector('.search');
-    const suggestions = document.querySelector('.suggestions');
+    const searchInput = document.querySelector('.search-form__input');
+    const suggestions = document.querySelector('.search-form__list');
     //pagination variables:
     let currentPage = 1;
     let itemsPerPage = 8;

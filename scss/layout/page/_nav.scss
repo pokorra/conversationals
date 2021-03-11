@@ -1,0 +1,75 @@
+.page__body {
+    
+.page__nav {
+    padding: 2vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    svg {
+        width: 5vh;
+        height: 5vh;
+        position: relative;
+        z-index: 5;
+        &:hover {
+            animation: roll .7s linear infinite;
+        }
+    }
+    .page__nav-list {
+        list-style: none;
+        position: absolute;
+        width: 40vw;
+        right: 2px;
+        top: 9vh;
+        
+        border-radius: 0 0 10px 10px;
+        background-color: $background-color;
+        text-align: center;
+        z-index: 2;
+        transition: .4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    }
+    .rolled-up {
+        transform: translateY(-100%);
+    }
+    
+    .rolled-down {
+        transform: translateY(0%);
+        box-shadow: 3px 3px 20px rgb(80, 80, 80);
+        li {
+            padding: 1vh 0;
+            background-color: $main-color;
+            color: $background-color;
+            border-top: 2px solid $font-color;
+            text-transform: capitalize;
+            cursor: pointer;
+            &:last-of-type {
+                border-radius: 0 0 10px 10px;
+            }
+            &:hover {
+                background-color: $darker-main-color;
+            }
+            a {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+}
+
+@keyframes roll {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@media only screen and (min-width: 700px) and (orientation: portrait) {
+    .page__body .page__nav .page__nav-list {
+        width: 25vw;
+    }
+}
+
+@media only screen and (min-width: 700px) and (orientation: landscape) {
+    .page__body .page__nav .page__nav-list {
+        width: 20vw;
+    }
+}

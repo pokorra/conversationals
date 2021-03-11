@@ -1,14 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500&display=swap');
-
-h2 {
-    font-family: 'Bodoni Moda', serif;
-}
-
-.page-body {
+.page__body {
     overflow: hidden;
     position: relative;
     height: 100vh;
-    background: linear-gradient($darkgreen-color 0%, $darkgreen-color 10%,
-                $green-color 75%, $side-color 95%);
+    background: linear-gradient($darker-main-color 0%, $darker-main-color 10%,
+                $main-color 75%, $background-color 95%);
 }
 

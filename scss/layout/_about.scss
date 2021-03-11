@@ -5,7 +5,7 @@
     justify-content: flex-start;
     width: 100vw;
     padding: 2vh 5vw ;
-    background: linear-gradient($darkgreen-color 0%, $green-color 75%, $side-color 95%);
+    background: linear-gradient($darker-main-color 0%, $main-color 75%, $background-color 95%);
 }
 
 .about__btn {
@@ -21,7 +21,7 @@
 
 }
 .collapse {
-    background-color: $side-color;
+    background-color: $background-color;
 }
 .about__desc {
     color: white;
@@ -39,11 +39,11 @@
     bottom: 3vh;
 }
 .cta--back {
-    background-color: $red-color;
-    color: $side-color;
+    background-color: $contrast-color;
+    color: $background-color;
     margin: 0 auto;
     &:hover {
-        background-color: $red-color;
+        background-color: $contrast-color;
     }
 }
 

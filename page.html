@@ -9,14 +9,13 @@
     <link rel="icon" href="./img/conversation_icon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body class="page-body">
-  <header>
-    <div class="page-name">
-      <h1>Algorytmy 
-      </h1>
+<body class="page__body">
+  <header class="page__header">
+    <div class="page__title">
+      <h1>Algorytmy </h1>
     </div>
   </header>
-  <nav>
+  <nav class="page__nav">
     <button class="menu-btn spiral-icon">
       <svg class="spiral-icon" width="577" height="547" viewBox="0 0 577 547" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="577" height="547" fill="none"/>
@@ -27,7 +26,7 @@
         </g>
         </svg>
     </button>
-    <ul class=" nav-list rolled-up" id="nav-list">
+    <ul class="page__nav-list rolled-up" id="nav-list">
       <li> <a href="about.html"> o projekcie </a> </li>
       <li> <a href="about.html"> wsparcie instytucji </a> </li>
       <li> <a href="about.html"> twórcy </a> </li>
@@ -35,12 +34,12 @@
   </nav>
 
   <form class="search-form">
-    <input type="text" class="search" placeholder="Czego szukasz?">
-    <ul class="suggestions">
+    <input type="text" class="search-form__input" placeholder="Czego szukasz?">
+    <ul class="search-form__list">
     </ul>
   </form>
-  <section class="paginated-items">
 
+  <section class="paginated-items">
       <ul class="list-container">
       </ul>
   <div class='page-numbers'>
@@ -49,11 +48,6 @@
 
   </section>
   
-
-  <!-- <footer class="footer">
-    <p class="footer__info"></p>
-  </footer> -->
-  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
 
   <script src="./app/main.js"></script>
 </body>

@@ -6,8 +6,8 @@
 }
 
 @mixin highlight {
-    background-color: $green-color;
-    color: $side-color;
+    background-color: $main-color;
+    color: $background-color;
     box-shadow: 3px 3px 7px $font-color;
 }
 
@@ -17,6 +17,6 @@
 }
 
 @mixin active-about {
-    background-color: $red-color;
-    color: $side-color;
+    background-color: $contrast-color;
+    color: $background-color;
 }
