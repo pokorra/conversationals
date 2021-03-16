@@ -89,16 +89,16 @@ function getBase(){
             base.push(each);
         });       
         DisplayList(base, list, itemsPerPage, currentPage);
-        Pagination(base, paginationBox, itemsPerPage);
+        Pagination(base, paginationBox, itemsPerPage, currentPage);
         searchInput.addEventListener('keyup', displayNamesInput);
     })
 };
 
 //displaying list
-function DisplayList(items, wrapper, itemsPerPage, pageNumber) {
+function DisplayList(items, wrapper, itemsPerPage, pagesAmount) {
     wrapper.innerHTML = '';
-    pageNumber--;
-    let start = itemsPerPage * pageNumber;
+    pagesAmount--;
+    let start = itemsPerPage * pagesAmount;
     let end = start + itemsPerPage;
     let paginatedItems = items.slice(start, end);
     for (let i = 0; i< paginatedItems.length; i++) {
@@ -163,28 +163,72 @@ window.showItem = (item) => {
     append(body, bigDiv);
 }
 
-function Pagination (items, wrapper, itemsPerPage){
+//creating pagination
+function Pagination(items, wrapper, itemsPerPage, page){
     wrapper.innerHTML = '';
-    let pageNumber = Math.ceil(items.length / itemsPerPage);
-    for (let i = 1; i<pageNumber + 1 ; i++) {
-        let btn = PaginationButton(i, items);
-        append(wrapper, btn);
-    }  
-}
+    let pagesAmount = Math.ceil(items.length / itemsPerPage);
+    let prevPage = page-1;
+    let nextPage = page+1;
 
-function PaginationButton(page, items){
-    let button = createNew('button');
-    button.innerHTML = page;
-    currentPage == page ? button.classList.add('active') : '';
-    button.addEventListener('click', ()=> {
-        currentPage = page;
-        DisplayList(items, list, itemsPerPage, currentPage);
-        document.querySelector('button.active').classList.remove('active');
-        button.classList.add('active');
-    })
+    if (page > 2){
+        let prevLi = `<i class="prev"> </i>prev `
+        let prevBtn = PaginationButton(page, prevLi);
+        prevBtn.addEventListener('click', function(){
+            currentPage = prevPage;
+            Pagination(base, paginationBox, itemsPerPage, currentPage);
+            DisplayList(items, list, itemsPerPage, currentPage);
+            })
+        append(wrapper, prevBtn);
+    }
+    if (page > 2) {
+        Dotts(wrapper);
+    }
+
+    for (let visiblePages = prevPage; visiblePages <= nextPage; visiblePages++ ){
+        if (visiblePages == 0) {
+            visiblePages = visiblePages+1;
+        }
+        let pageBtn = PaginationButton(page, visiblePages);
+        pageBtn.addEventListener('click', ()=> {
+                currentPage = visiblePages;
+                DisplayList(items, list, itemsPerPage, currentPage);
+                    document.querySelector('li.active').classList.remove('active');
+                    pageBtn.classList.add('active');
+                });
+        append(wrapper, pageBtn);
+    }
+    if (page < pagesAmount -1) {
+        if (page < pagesAmount -2) {
+            Dotts(wrapper);
+        }
+        let nextLi = `next <i class="next"> </i> `;
+        let nextBtn = PaginationButton(page, nextLi);
+        nextBtn.addEventListener('click', function(){
+            currentPage = nextPage;
+            Pagination(base, paginationBox, itemsPerPage, currentPage);
+            DisplayList(items, list, itemsPerPage, currentPage);
+            });
+        append(wrapper, nextBtn);
+    }
+    
+}
+//creating pagination button
+function PaginationButton(page, inner, wrapper){
+    let button = createNew('li');
+    button.innerHTML = inner;
+    isNaN(inner) ? button.classList.add('page-numbers__item', 'page-numbers__not-a-number') : button.classList.add('page-numbers__item','page-numbers__number');
+    if (inner === page) {   
+        currentPage == page ? button.classList.add('active') : '';
+    }
     return button;
 }
-
+//creating dots
+function Dotts(wrapper){
+    let dottsBtn = createNew('li');
+        dottsBtn.innerHTML = '...';
+        dottsBtn.classList.add('page-numbers__item', 'dots');
+        append(wrapper, dottsBtn);
+}
 
 getBase();
 
