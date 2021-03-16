@@ -61,7 +61,6 @@ function displayNamesInput(){
     const matchInBase = findPlaces(this.value, base);
     const list = matchInBase.map(match => {
         if(this.value === '') {return;}
-        // const stringified = JSON.stringify(match.name);
         return ` <li class='list-from-form'> 
                     <button  onclick=showItemFromList('${match.name}')> ${match.name} </button> 
                 </li>`;
@@ -81,7 +80,6 @@ const closePopup = () => {
 //fetching data from api
 const api = "https://api.npoint.io/e26132b4e5bfd46cdb19/base/"
 function getBase(){
-
     fetch(api)
     .then(res => res.json())
     .then(data => {
@@ -230,6 +228,7 @@ function Dotts(wrapper){
         append(wrapper, dottsBtn);
 }
 
+//calling function getBase which runs this whole thing
 getBase();
 
 

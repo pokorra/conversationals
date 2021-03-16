@@ -32,80 +32,6 @@
     }
 }
 
-.page-numbers {
-    margin: 2vh auto 1vh;
-    min-width: 70vw;
-    height: auto;
-    padding: 1vh 2vw;
-    display: flex;
-    justify-content: center;
-    // flex-wrap: wrap;
-    transition: .1s;
-    list-style: none;
-
-    background-color: $contrast-color;
-    border-radius: 20px;
-    box-shadow: 3px 3px 10px $font-color; 
-}
-.page-numbers__item {
-    color: $background-color;
-    background-color: $contrast-color;
-    font-weight: bold;
-    margin: 5px;
-    padding: 3px 8px;
-}
-.page-numbers__not-a-number {
-    box-shadow: 2px 2px 6px $font-color;
-    cursor: pointer;
-}
-.page-numbers__not-a-number:first-of-type {
-    border-radius: 15px 5px 5px 15px;
-}
-.page-numbers__not-a-number:last-of-type {
-    border-radius: 5px 15px 15px 5px;
-}
-.page-numbers__number {
-    padding: 0;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    box-shadow: 2px 2px 6px $font-color;
-    cursor: pointer;
-    @include centerflex;
-}
-.dots {
-    box-shadow: none;
-    display: flex;
-    align-items: flex-end;
-}
-
-.page-numbers__number:hover, .active {
-    background-color: $background-color;
-    color: $font-color;
-    transform: scale(1.1);
-    &:hover {
-        background-color: rgba(245, 245, 245, 0.5);
-    }
-}
-.prev, .next {
-    padding: 3px 8px;
-    margin: 5px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: 10px;
-    margin: 2px;
-    
-}
-.prev {
-    background-image: url(../img/arrow_prev.svg);
-    margin-right: 5px;
-}
-.next {
-    background-image: url(../img/arrow.svg);
-    margin-left: 5px;
-}
-
 
 @keyframes move-skew {
     from { transform: skew(45deg) translateX(-10vw);}
@@ -121,17 +47,7 @@
         font-size: 17px;
         padding: 13px 0 13px 10vw;
     }
-    .page-numbers {
-        min-width: 50vw;
-        margin: 4vh auto 1vh;
-        padding: 2vh 10vw;
-    }
-    .page-numbers__number {
-        margin: .7vh;
-        font-size: 17px;
-        padding: 8px 12px;
-        box-shadow: 4px 4px 10px $font-color;
-    }
+
 }
 
 @media only screen and (min-width: 700px) and (orientation: landscape) {
@@ -169,16 +85,7 @@
             }
         }
     }
-    .page-numbers {
-        min-width: 45vw;
-        padding: 2vh 5vw;
-    }
-    .page-numbers__number {
-        margin: .7vh 1vw;
-        font-size: 2.5vh;
-        padding: 1vh 1.8vh;
-        box-shadow: 4px 4px 10px $font-color;
-    }
+
 }
 
 @media only screen and (min-width: 1250px) and (orientation: landscape) {
@@ -186,24 +93,6 @@
         max-width: 1200px;
         margin: 0 auto;
     }
-    .page-numbers {
-        min-width: 40vw;
-        border-radius: 20px;
-        padding: 1.5vh 3vw;  
-    }
-    .page-numbers__number {
-        padding: .5vh 1.2vh;
-    }
-}
 
-@media only screen and (min-height: 800px) and (orientation: landscape) {
-    .page-numbers {
-        min-width: 35vw;
-        border-radius: 20px;
-    }
-    .page-numbers__number {
-        font-size: 2vh;
-        padding: .7vh 1.4vh;
-        }
 }
 
