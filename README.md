@@ -6,4 +6,4 @@ This project logic is based on communication with JSON-organized database stored
 To code layout I did use SCSS features and then processed it with Gulp.js.
 
 Have fun finding and using comments that will guarantee nothing less than respect of your interlocutors!
-Here you can find the project: https://pokorra.github.io/conversationals
+Here you can find the project: https://pokorra.github.io/conversationals-api
