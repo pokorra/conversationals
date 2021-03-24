@@ -8,6 +8,10 @@
     background: linear-gradient($darker-main-color 0%, $main-color 75%, $background-color 95%);
 }
 
+.about__buttons-container {
+    height: 80vh;
+}
+
 .about__btn {
     text-transform: capitalize;
     padding: 1vh 0;
@@ -45,6 +49,11 @@
     &:hover {
         background-color: $contrast-color;
     }
+}
+.about__gh-link {
+    font-weight: bold;
+    font-size: 130%;
+    color: $contrast-color;
 }
 
 @media only screen and (min-width: 700px) and (orientation: portrait) {
@@ -85,5 +94,8 @@
         max-width: 700px;
         font-size: 17px;
         margin-bottom: 1vh;
+    }
+    .about__gh-link:hover {
+        text-shadow: 0 0 5px $background-color;
     }
 }
