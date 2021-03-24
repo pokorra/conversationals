@@ -78,7 +78,7 @@ const closePopup = () => {
 
 //bigger functions
 //fetching data from api
-const api = "https://api.npoint.io/e26132b4e5bfd46cdb19/base/"
+const api = "https://api.npoint.io/74af5dfa4a627980ffd0/base/"
 function getBase(){
     fetch(api)
     .then(res => res.json())

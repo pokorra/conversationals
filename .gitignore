@@ -1,3 +1,6 @@
+#file containing database since it was exported online
+dbJson
+
 # Logs
 logs
 *.log

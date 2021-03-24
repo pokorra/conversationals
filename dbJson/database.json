@@ -456,7 +456,7 @@
                     "info": [
                         {
                             "innerinfo": "Wszystko było lepsze",
-                            "innerlink": ["Wszystko", "Za komuny"]
+                            "innerlink": ["Wszystko", "Komuna"]
                         },
                         {
                             "innerinfo": "Żydzi jedli czosnek",
@@ -681,7 +681,7 @@
                     "info": [
                         { 
                             "innerinfo": "Było [z wyjątkami:]",
-                            "innerlink": ["Przed wojną", "Za komuny"]
+                            "innerlink": ["Przed wojną", "Komuna"]
                         },
                         { 
                             "innerinfo": "Jest",
