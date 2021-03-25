@@ -31,7 +31,7 @@ const showLinkedItem = (itemName) => {
     const newItem = base.find( ({name}) => name === itemName);
     showItem(newItem);
 }
-//unsolved issue with two-word items
+
 window.showItemFromList = (itemName) => {
     const newItem = base.find( ({name}) => name === itemName);
     showItem(newItem);
@@ -62,7 +62,7 @@ function displayNamesInput(){
     const list = matchInBase.map(match => {
         if(this.value === '') {return;}
         return ` <li class='list-from-form'> 
-                    <button  onclick=showItemFromList('${match.name}')> ${match.name} </button> 
+                    <button  onclick="showItemFromList('${match.name}')"> ${match.name} </button> 
                 </li>`;
     }).join('');  
     suggestions.innerHTML = list;

@@ -9,9 +9,12 @@
 }
 
 .about__buttons-container {
-    height: 80vh;
+    height: 80%;
+    width: inherit;
+    padding: inherit;
+    overflow: auto;
+    border-bottom: 1.5px dashed $background-color;
 }
-
 .about__btn {
     text-transform: capitalize;
     padding: 1vh 0;
@@ -22,7 +25,6 @@
     font-weight: bold;    
     border-radius: 15px;
     width: 90vw;
-
 }
 .collapse {
     background-color: $background-color;
@@ -58,7 +60,10 @@
 
 @media only screen and (min-width: 700px) and (orientation: portrait) {
     .about {
-        padding: 10vh 15vw;
+        padding: 5vh 15vw 10vh;
+    }
+    .about__buttons-container {
+        height: 85%;
     }
     .about__btn {
         width: 90%;
@@ -75,9 +80,14 @@
 
 @media only screen and (min-width: 700px) and (orientation: landscape) {
     .about {
-        padding: 5vh 40vw 5vh 5vw;
+        // padding: 5vh 40vw 5vh 5vw;
+        padding: 5vh 10vw 5vh 5vw;
     }
-
+    .about__buttons-container {
+        padding-left: 0;
+        width: 70vw;
+        border-bottom: 2px dashed $background-color;
+    }
     .about__btn {
         width: 90%;
         border-radius: 20px;
@@ -97,5 +107,11 @@
     }
     .about__gh-link:hover {
         text-shadow: 0 0 5px $background-color;
+    }
+}
+
+@media only screen and (min-width: 1300px) and (orientation: landscape) {
+    .about__buttons-container {
+        width: 60vw;
     }
 }
