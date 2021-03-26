@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Lato:wght@400;700&display=swap');
-$title-font: 'Bodoni Moda', serif;
-$main-font: 'Lato', sans-serif;
-
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Lato:wght@400;700&display=swap");
+$title-font: "Bodoni Moda", serif;
+$main-font: "Lato", sans-serif;
 
 //colors:
 $font-color: #26252c;
@@ -12,8 +11,7 @@ $grey-color: #7e9e9c;
 $main-color: #a61a5d;
 $darker-main-color: #670069;
 
-
-$half-trans: rgba(166, 26, 93, .5);
+$half-trans: rgba(166, 26, 93, 0.5);
 
 $contrast-color: #00c895;
 $alt-yellow: rgb(126, 158, 156);

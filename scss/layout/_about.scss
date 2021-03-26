@@ -4,8 +4,12 @@
     @include centerflex;
     justify-content: flex-start;
     width: 100vw;
-    padding: 2vh 5vw ;
-    background: linear-gradient($darker-main-color 0%, $main-color 75%, $background-color 95%);
+    padding: 2vh 5vw;
+    background: linear-gradient(
+        $darker-main-color 0%,
+        $main-color 75%,
+        $background-color 95%
+    );
 }
 
 .about__buttons-container {
@@ -22,7 +26,7 @@
     text-align: center;
     letter-spacing: 1px;
     font-size: 17px;
-    font-weight: bold;    
+    font-weight: bold;
     border-radius: 15px;
     width: 90vw;
 }
@@ -34,9 +38,10 @@
     padding-left: 2vw;
     overflow: hidden;
     max-height: 0;
-    transition: max-height .2s linear;
+    transition: max-height 0.2s linear;
 }
-.about-active, .collapse:hover {
+.about-active,
+.collapse:hover {
     @include active-about;
 }
 

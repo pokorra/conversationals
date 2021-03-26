@@ -5,14 +5,16 @@
     font-family: $main-font;
     color: $font-color;
     font-size: 13px;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 body {
     background-color: $background-color;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: $title-font;
 }
 
