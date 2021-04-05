@@ -9,6 +9,7 @@
   "author": "Patrycja Pokora",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^7.23.0",
     "gulp": "^4.0.2",
     "gulp-jshint": "^2.1.0",
     "gulp-sass": "^4.1.0",

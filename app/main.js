@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const list = document.querySelector(".list-container");
     const paginationBox = document.querySelector(".page-numbers");
     const body = document.querySelector("body");
-    const html = document.querySelector("html");
     const menuBtn = document.querySelector(".menu-btn");
     const navList = document.querySelector("#nav-list");
     //searching variables:
@@ -221,7 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
     //creating pagination button
-    function PaginationButton(page, inner, wrapper) {
+    function PaginationButton(page, inner) {
         let button = createNew("li");
         button.innerHTML = inner;
         isNaN(inner)
